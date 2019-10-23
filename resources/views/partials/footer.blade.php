@@ -8,14 +8,14 @@
               </div>
               <div>
                 <ul class="archives_list">
-                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.laxyofinance.com/"> Laxyo Finance Limited</a></li>
-                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.yolaxinfra.com/"> Yolax Infranergy Pvt. Ltd.</a></li>
-                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.laxyosolutionsoft.com/"> Laxyo Solution Soft Pvt. Ltd.</a></li>
-                   <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://lakshyainternationalschool.org/"> Lakshya International School</a></li>
-                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.apnagps.com/"> Apna GPS</a></li>
-                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.discountbrandfactory.com/"> Discount Brand Factory</a></li>
-                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.advocatemail.com/"> Advocate Mail</a></li>
-                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.maagayatrihospital.org/"> Maa Gayatri Hospital</a></li>
+                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.laxyofinance.com"> Laxyo Finance Limited</a></li>
+                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.yolaxinfra.com"> Yolax Infranergy Pvt. Ltd.</a></li>
+                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.laxyosolutionsoft.com"> Laxyo Solution Soft Pvt. Ltd.</a></li>
+                   <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://lakshyainternationalschool.org"> Lakshya International School</a></li>
+                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.apnagps.com"> Apna GPS</a></li>
+                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.discountbrandfactory.com"> Discount Brand Factory</a></li>
+                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.advocatemail.com"> Advocate Mail</a></li>
+                  <li><i class="fa fa-angle-double-right"></i><a target="_blank" href="http://www.maagayatrihospital.org"> Maa Gayatri Hospital</a></li>
                 </ul>
               </div>
               <br>
@@ -30,17 +30,17 @@
               <div class="wfoot_content">
                 <ul class="contact-details-alt">
                   <li><i class="fa fa-map-marker"></i>
-                    <p>{{ get_site_val('footer_ofc1_addr') }}</p>
+                    <p>{{ get_site_val('footer_ofc1_addr1') }}</p>
                   </li>
                   <li><i class="fa fa-phone"></i>
-                    <p><span>Phone :</span> {{ get_site_val('footer_ofc1_phone') }}</p>
+                    <p><span>Phone :</span> {{ get_site_val('footer_ofc1_phone1') }}</p>
                  </li>
                   <li><i class="fa fa-phone"></i>
-                    <p><span>Phone :</span> {{ get_site_val('footer_ofc1_phone') }}</p>
+                    <p><span>Phone :</span> {{ get_site_val('footer_ofc1_phone2') }}</p>
                   </li>
-                  <li><i class="fa fa-envelope"></i>
-                    <p><span>Email :</span> {{ get_site_val('footer_ofc1_email') }}</p>
-                  <li>
+                  {{-- <li><i class="fa fa-envelope"></i>
+                    <p><span>Email :</span> {{ get_site_val('footer_ofc1_email1') }}</p>
+                  <li> --}}
                 </ul>
               </div>
           </div> 

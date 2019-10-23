@@ -52,7 +52,7 @@
                   
                   <li><a href="{{url('/about')}}">About</a></li>
 
-                  <li><a href="{{url('laxyo_group_companies')}}">Laxyo Group Companies<span class="marker"><i class="fa fa-angle-down"></i></span></a>
+                  <li><a href="{{url('laxyo-group-companies')}}">Laxyo Group Companies<span class="marker"><i class="fa fa-angle-down"></i></span></a>
                     <div class="megamenu rew">
                       <div class="row">
                         <div class="col-md-4 col-sm-4 col-xs-12">
@@ -113,7 +113,7 @@
                                   </li>
 
                                   <li> <span> <a target="_blank" href="#" class="post-img"> <img src="images/apnasolar-icon.jpg" alt="apnasolar"> <span class="overlay"></span> </a> </span>
-                                    <p class="wrap"> <a target="_blank" href="#" class="rp_title">Apna Solar</a> <a href="http://www.apnasolar.com/" target="_blank"><small class="rp_date"><i>www.apnasolar.com</i></small></a> </p>
+                                    <p class="wrap"> <a target="_blank" href="http://www.apnasolar.com/" class="rp_title">Apna Solar</a> <a href="http://www.apnasolar.com/" target="_blank"><small class="rp_date"><i>www.apnasolar.com</i></small></a> </p>
                                   </li>
 
                                 </ul>
