@@ -144,19 +144,19 @@
                             <div class="tpl2">
                               <ul>
                                 <li>
-                                  <span><a href="{{url('/railway_contractors')}}"><i class="fa fa-angle-right"></i> &nbsp;Railway Contractors</a></span>
+                                  <span><a href="{{url('/railway-contractors')}}"><i class="fa fa-angle-right"></i> &nbsp;Railway Contractors</a></span>
                                 </li>
                                
                                <li>
-                                  <span><a href="{{url('/mining_services')}}"><i class="fa fa-angle-right"></i> &nbsp;Mining Services</a></span>
+                                  <span><a href="{{url('/mining-services')}}"><i class="fa fa-angle-right"></i> &nbsp;Mining Services</a></span>
                                 </li>
                                 
                                 <li>
-                                  <span><a href="{{url('/renewable_energy_system')}}"><i class="fa fa-angle-right"></i> &nbsp;Renewable Energy System</a></span>
+                                  <span><a href="{{url('/renewable-energy-system')}}"><i class="fa fa-angle-right"></i> &nbsp;Renewable Energy System</a></span>
                                 </li>
 
                                 <li>
-                                  <span><a href="{{url('/amphibious_excavator')}}"><i class="fa fa-angle-right"></i> &nbsp;Amphibious Excavator</a></span>
+                                  <span><a href="{{url('/amphibious-excavator')}}"><i class="fa fa-angle-right"></i> &nbsp;Amphibious Excavator</a></span>
                                 </li>
                                  
                               </ul>
@@ -167,15 +167,15 @@
                             <div class="tpl2">
                               <ul>
                               	 <li>
-                                  <span><a href="{{url('/operation_and_maintenance_contractors')}}"><i class="fa fa-angle-right"></i> &nbsp;Operation and Maintenance Contractors</a></span>
+                                  <span><a href="{{url('/operation-and-maintenance-contractors')}}"><i class="fa fa-angle-right"></i> &nbsp;Operation and Maintenance Contractors</a></span>
                                 </li>
                                 
                                  <li>
-                                  <span><a href="{{url('/dredging_and_reclamation')}}"><i class="fa fa-angle-right"></i> &nbsp;Dredging &amp; Reclamation</a></span>
+                                  <span><a href="{{url('/dredging-and-reclamation')}}"><i class="fa fa-angle-right"></i> &nbsp;Dredging &amp; Reclamation</a></span>
                                 </li>
 
                                 <li>
-                                  <span><a href="{{url('/construction_equipment_rental_services')}}"><i class="fa fa-angle-right"></i> &nbsp;Rental Services</a></span>
+                                  <span><a href="{{url('/construction-equipment-rental-services')}}"><i class="fa fa-angle-right"></i> &nbsp;Rental Services</a></span>
                                 </li>
 
                               </ul>

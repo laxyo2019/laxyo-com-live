@@ -56,7 +56,7 @@
                     <p>{{ get_site_val('footer_ofc2_addr1') }}</p>
                   </li>
                   <li><i class="fa fa-phone"></i>
-                    <p><span>Phone :</span> {{ get_site_val('footer_ofc2_addr1') }}</p>
+                    <p><span>Phone :</span> {{ get_site_val('footer_ofc2_phone1') }}</p>
                   </li>
                 </ul>
               </div>  
@@ -74,7 +74,7 @@
                     <p>{{ get_site_val('footer_ofc3_addr1') }}</p>
                   </li>
                   <li><i class="fa fa-phone"></i>
-                    <p><span>Phone:</span> {{ get_site_val('footer_ofc3_addr1') }}</p>
+                    <p><span>Phone:</span> {{ get_site_val('footer_ofc3_phone1') }}</p>
                   </li>
                 </ul>
               </div>  
