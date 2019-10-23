@@ -5,7 +5,7 @@
           <div class="col-lg-7 col-md-7 col-sm-7">
             <ul class="top_contact">
               <li class="t_phone"><p>{{ get_site_val('topnav_phone') }}</p></li>
-              <li class="t_mail"><p>{{ get_site_val('topnav_email') }}</p></li>
+              {{-- <li class="t_mail"><p>{{ get_site_val('topnav_email') }}</p></li> --}}
             </ul>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-12">

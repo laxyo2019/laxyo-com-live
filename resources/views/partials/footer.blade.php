@@ -53,10 +53,10 @@
               <div class="wfoot_content">
                <ul class="contact-details-alt">
                   <li><i class="fa fa-map-marker"></i>
-                    <p>{{ get_site_val('footer_ofc2_addr') }}</p>
+                    <p>{{ get_site_val('footer_ofc2_addr1') }}</p>
                   </li>
                   <li><i class="fa fa-phone"></i>
-                    <p><span>Phone :</span> {{ get_site_val('footer_ofc2_addr') }}</p>
+                    <p><span>Phone :</span> {{ get_site_val('footer_ofc2_addr1') }}</p>
                   </li>
                 </ul>
               </div>  
@@ -71,10 +71,10 @@
               <div class="wfoot_content">
                <ul class="contact-details-alt">
                   <li><i class="fa fa-map-marker"></i>
-                    <p>{{ get_site_val('footer_ofc2_addr') }}</p>
+                    <p>{{ get_site_val('footer_ofc3_addr1') }}</p>
                   </li>
                   <li><i class="fa fa-phone"></i>
-                    <p><span>Phone:</span> {{ get_site_val('footer_ofc2_addr') }}</p>
+                    <p><span>Phone:</span> {{ get_site_val('footer_ofc3_addr1') }}</p>
                   </li>
                 </ul>
               </div>  
