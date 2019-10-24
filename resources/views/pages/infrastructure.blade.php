@@ -35,7 +35,9 @@
         <section>
           <div class="row">
             <div class="title_content">
-              <h3>Resource Management</h3>
+              <div class="title_widget">
+                <h3>Resource Management</h3>
+              </div>
             </div>
             <div class="infrastructure">
               <p>Laxyo has formed a Resource Management group for identification, review, selection, procurement and mobilisation of Plant &amp; Machinery, Manpower, Facilities, Material, Consumables and Sub-contractors required for completion of a project/job well within stipulated time schedule. Laxyo has created a large fleet of construction equipments comprising of specialised equipments viz Excavators, JCBs, Dozers, Pay Loaders, Tippers, Cranes, Lifters, Road Rollers, Rock Breakers, Tractors and Trolleys, Tankers etc for achieving speed, quality and cost effectiveness in construction work. </p>
@@ -180,7 +182,7 @@
    $("#modal-carousel").carousel({interval:false});
 
    /* change modal title when slide changes */
-   $("#modal-carousel").on("slid.bs.carousel",       function () {
+   $("#modal-carousel").on("slid.bs.carousel", function () {
         $(".modal-title")
         .html($(this)
         .find(".active img")

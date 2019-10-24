@@ -40,7 +40,9 @@
         <!-- service 1 -->
         <div class="row pb_30">
           <div class="title_content">
-            <h3>Laxyo Finance Limited</h3>
+            <div class="title_widget">
+              <h3>Laxyo Finance Limited</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-12 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('images/laxyo-finance.jpg')}}" alt="laxyo finance" class="img img-responsive img-thumbnail"> </div>
@@ -52,7 +54,9 @@
         <!-- service 2 -->
         <div class="row pb_30">
           <div class="title_content">
-            <h3>Yolax Infranergy Pvt. Ltd.</h3>
+            <div class="title_widget">
+              <h3>Yolax Infranergy Pvt. Ltd.</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-12 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('images/yolax-consultancy-services.jpg')}}" alt="yolax consultancy services" class="img img-responsive img-thumbnail"> </div>
@@ -65,7 +69,9 @@
         <!-- service 3 -->
         <div class="row pb_30">
           <div class="title_content">
-            <h3>Laxyo SolutionSoft Pvt. Ltd.</h3>
+            <div class="title_widget">
+              <h3>Laxyo SolutionSoft Pvt. Ltd.</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-12 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('images/software-development-services.jpg')}}" alt="software development services" class="img img-responsive img-thumbnail"> </div>
@@ -80,7 +86,9 @@
         <!-- service 4 -->
         <div class="row pb_30">
           <div class="title_content">
-            <h3>Lakshya International School</h3>
+            <div class="title_widget">
+              <h3>Lakshya International School</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-3 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('images/best-international-school-nagda.jpg')}}" alt="best international school nagda" class="img img-responsive img-thumbnail"> </div>
@@ -93,7 +101,9 @@
         <!-- service 5 -->
         <div class="row pb_30">
           <div class="title_content">
-            <h3>APNA GPS - The Tracker</h3>
+            <div class="title_widget">
+              <h3>APNA GPS - The Tracker</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-3 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('images/gps-tracking-system.jpg')}}" alt="gps tracking system" class="img img-responsive img-thumbnail"> </div>
@@ -106,7 +116,9 @@
          <!-- service 6 -->
         <div class="row pb_30">
           <div class="title_content">
-            <h3>Discount Brand Factory</h3>
+            <div class="title_widget">
+              <h3>Discount Brand Factory</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-12 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('images/franchise-business.jpg')}}" alt="franchise business" class="img img-responsive img-thumbnail"> </div>
@@ -119,7 +131,9 @@
         <!-- service 7 -->
         <div class="row pb_30">
           <div class="title_content">
-            <h3>Advocate Mail</h3>
+            <div class="title_widget">
+              <h3>Advocate Mail</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-3 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('images/advocatemail-for-lawyers.jpg')}}" alt="advocatemail for lawyers" class="img img-responsive img-thumbnail"> </div>
@@ -132,7 +146,9 @@
         <!-- service 8 -->
         <div class="row pb_30">
           <div class="title_content">
-            <h3>Maa Gayatri Hospital</h3>
+            <div class="title_widget">
+              <h3>Maa Gayatri Hospital</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-3 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('images/best-hospital-ratlam.jpg')}}" alt="best hospital ratlam" class="img img-responsive img-thumbnail"> </div>
@@ -145,7 +161,9 @@
         <!-- service 9 -->
         <div class="row pb_30">
           <div class="title_content">
-            <h3>La' Pink Cafe</h3>
+            <div class="title_widget">
+              <h3>La' Pink Cafe</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-3 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('images/lapinkcafe.jpg')}}" alt="Pink cafe" class="img img-responsive img-thumbnail"> </div>
@@ -159,7 +177,9 @@
         <!-- service 10 -->
         <div class="row pb_30">
 	        <div class="title_content">
+            <div class="title_widget">
 	            <h3>Apna Solar</h3>
+            </div>
 	        </div>
 	        <div class="row">
 	            <div class="col-md-3 col-lg-3 col-sm-3 effect-slide-left in" data-effect="slide-left" style="transition: all 0.7s ease-in-out 0s;"> <img src="{{asset('img/apna-solar.jpg')}}" alt="solar" class="img img-responsive img-thumbnail"> 

@@ -35,8 +35,10 @@
 	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
 	<section>
 		<div class="row">
-			<div class="title_content">             
-		    	<h3>Our Clients</h3>            
+			<div class="title_content">
+        <div class="title_widget">           
+		    	<h3>Our Clients</h3>
+        </div>            
 		  </div>  
       <div class="col-sm-12 mtl">
         <div class="row">

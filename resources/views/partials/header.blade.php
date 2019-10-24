@@ -173,6 +173,10 @@
                                   <span><a href="{{url('/construction-equipment-rental-services')}}"><i class="fa fa-angle-right"></i> &nbsp;Rental Services</a></span>
                                 </li>
 
+                                <li>
+                                  <span><a href="{{url('/material-handling-contractor')}}"><i class="fa fa-angle-right"></i> &nbsp;Material Handling Contractor</a></span>
+                                </li>
+
                               </ul>
                             </div>
                           </div>

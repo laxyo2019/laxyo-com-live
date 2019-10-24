@@ -35,7 +35,9 @@
 		<div class="row">
 			<div class="col-lg-9 col-md-9 col-sm-12">
 				<div class="title_content">
-					<h3>Let's keep in touch</h3>	
+					<div class="title_widget">
+						<h3>Let's keep in touch</h3>
+					</div>
 				</div>
 				<p>Reach out to us and we'll respond as soon as possible.</p>
 				<div class="alert alert-success hidden alert-dismissable" id="contactSuccess">
@@ -43,6 +45,7 @@
 				<div class="alert alert-danger hidden" id="contactError">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>	<strong>Error!</strong>  <span class="errorMessage">There was an error sending your message.</span>
 				</div>
+				
 				<form id="contactForm" action="{{ route('contact.store') }}" method="POST" class="jogjaContact">
 					{{csrf_field()}}
 					
