@@ -5,13 +5,13 @@
 			<h3>Services Offered</h3>
 		</div>
 		<ul class="arrows_list">
-			<li><a href="{{url('/railway_contractors')}}"><i class="fa fa-angle-right"></i> Railway Contractors</a></li>
-			<li><a href="{{url('/operation_and_maintenance_contractors')}}"><i class="fa fa-angle-right"></i> Operation and Maintenance Contractors</a></li>
-			<li><a href="{{url('/mining_services')}}"><i class="fa fa-angle-right"></i> Mining Services</a></li>
-			<li><a href="{{url('/dredging_and_reclamation')}}"><i class="fa fa-angle-right"></i> Dredging &amp; Reclamation Services</a></li>
-			<li><a href="{{url('/renewable_energy_system')}}"><i class="fa fa-angle-right"></i> Renewable Energy System</a></li>
-			<li><a href="{{url('/construction_equipment_rental_services')}}"><i class="fa fa-angle-right"></i> Rental Services</a></li>
-			<li><a href="{{url('/amphibious_excavator')}}"><i class="fa fa-angle-right"></i> Amphibious Excavator</a></li>
+			<li><a href="{{url('/railway-contractors')}}"><i class="fa fa-angle-right"></i> Railway Contractors</a></li>
+			<li><a href="{{url('/operation-and-maintenance-contractors')}}"><i class="fa fa-angle-right"></i> Operation and Maintenance Contractors</a></li>
+			<li><a href="{{url('/mining-services')}}"><i class="fa fa-angle-right"></i> Mining Services</a></li>
+			<li><a href="{{url('/dredging-and-reclamation')}}"><i class="fa fa-angle-right"></i> Dredging &amp; Reclamation Services</a></li>
+			<li><a href="{{url('/renewable-energy-system')}}"><i class="fa fa-angle-right"></i> Renewable Energy System</a></li>
+			<li><a href="{{url('/construction-equipment-rental-services')}}"><i class="fa fa-angle-right"></i> Rental Services</a></li>
+			<li><a href="{{url('/amphibious-excavator')}}"><i class="fa fa-angle-right"></i> Amphibious Excavator</a></li>
 		</ul>
 	</div>
 

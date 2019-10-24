@@ -67,19 +67,9 @@
 					<div class="row">
 						 <div class="col-md-12 col-lg-12 col-sm-12">
 							<label>Your Address <span style="color: #F34D2C;">*</span></label>
-             	<input id="autocomplete"placeholder="Enter your address"onFocus="geolocate()"type="text" class="form-control" name="address"  value="{{ old('address') }}" />
+             	<input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" class="form-control" name="address"  value="{{ old('address') }}" />
              	@foreach($errors->get('address') as $error)	
              		<span class="text-danger">{{$error}}</span>
-							@endforeach
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12">
-							<label>Mobile No. <span style="color: #F34D2C;">*</span>
-							</label>
-							<input id="mobile" name="mobile" class="form-control" maxlength="100" value="{{ old('mobile') }}" type="text">
-							@foreach($errors->get('mobile') as $error)	<span class="text-danger">{{$error}}</span>
 							@endforeach
 						</div>
 					</div>
@@ -111,17 +101,18 @@
 						</div>
 					</div>
 				</form>
-				<br>
+				<hr>
 				<div class="row mrgb_20">
-						<div class="col-md-12 col-lg-12 col-sm-12">
-							<div id="map" style="width:100%;height:400px;"></div>
-						</div>
+					<div class="col-md-12 col-lg-12 col-sm-12">
+						<div id="map" style="width:100%;height:400px;"></div>
 					</div>
+				</div>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 well">
+				<h2 class="text-center mb-0"><u>Our Offices</u></h2>
 				<div class="widget_content" style="padding-top:15px">
 					<div class="title_content">
-						<h3>Regd. Off. - Ratlam</h3>
+						<h3>R/O - Ratlam</h3>
 					</div>
 					<ul class="widget_info_contact">
 						<li> <i class="fa fa-map-marker"></i>
@@ -130,14 +121,14 @@
 						<li><i class="fa fa-phone-square"></i>
 							<p>+91-7412-232432</p>
 						</li>
-						<li><i class="fa fa-fax"></i>
+						{{-- <li><i class="fa fa-fax"></i>
 							<p>+91-7412-232432</p>
-						</li>
+						</li> --}}
 					</ul>
 				</div>
 				<div class="widget_content">
 					<div class="title_content">
-						<h3>Corp. Off. - Indore</h3>
+						<h3>C/O - Indore</h3>
 					</div>
 					<ul class="widget_info_contact">
 						<li><i class="fa fa-map-marker"></i>
@@ -146,14 +137,14 @@
 						<li><i class="fa fa-phone-square"></i>
 							<p>+91-731-4043798</p>
 						</li>
-						<li><i class="fa fa-envelope"></i>
+						{{-- <li><i class="fa fa-envelope"></i>
 							<p>info@laxyo.com</p>
-						</li>
+						</li> --}}
 					</ul>
 				</div>
 				<div class="widget_content">
 					<div class="title_content">
-						<h3>Reg. Off. - Chittorgarh</h3>
+						<h3>R/O - Chittorgarh</h3>
 					</div>
 					<ul class="widget_info_contact">
 						<li><i class="fa fa-map-marker"></i>
