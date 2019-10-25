@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Form;
-
-use App\Http\Controllers\Controller;
+namespace App\Http\Controllers;
 
 class ContactsController extends Controller
 {

@@ -1,17 +1,12 @@
-
 @extends('layouts.app')
-
-@section('body')
-<head>
-    <title>Operation and Maintenance | Laxyo Energy Ltd.</title>  
+@section('title','Operation and Maintenance | Laxyo Energy Ltd.')
+@section('meta')
   <meta name="description" content= "Laxyo Group of energy is India based leading service providers for railway, operation and maintenance, mining, dredging and reclamation services.">    
   <meta name="keywords" content="operation and maintenance, railway track laying and linking, railway contractors, mining services, dredging services, operation & maintenance, opearion and maintenance company, operation and maintenance of dairy plants, operation and maintenance of power plants.">
-  
-</head>
+@endsection  
 
+@section('body')
 <section class="slider">
-  
-
 <div class="box-shadow">
         <div class="" id="owlslider">
                 <div class="item">

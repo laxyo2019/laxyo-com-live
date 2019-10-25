@@ -7,6 +7,14 @@ Route::get('/', function(){
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::name('admin.')->prefix('admin')->group(function () {
+	Route::resource('jobs', 'JobsController');
+	Route::resource('job-replies', 'JobRepliesController');
+	Route::resource('contacts', 'ContactsController');
+	Route::resource('feedbacks', 'FeedbacksController');
+	Route::resource('vendors', 'VendorsController');
+	Route::get('settings/site_variables', 'HomeController@site_variables')->name('settings.site_variables');
+});
 
 // For pages
 Route::view('/about', 'pages.about');
@@ -23,23 +31,9 @@ Route::view('/material-handling-contractor', 'pages.material-handling-contractor
 Route::view('/operation-and-maintenance-contractors', 'pages.operation_and_maintenance_contractors');
 Route::view('/dredging-and-reclamation', 'pages.dredging_and_reclamation');
 Route::view('/construction-equipment-rental-services', 'pages.construction_equipment_rental_services');
+Route::view('/contact', 'pages.contact');
+Route::view('/careers', 'pages.careers');
 
-Route::get('/contact', 'ContactController@index')->name('contact.index');
-Route::post('/contact', 'ContactController@store')->name('contact.store');
-
-Route::get('/careers', 'CareersController@index')->name('careers.index');
-Route::post('/careers', 'CareersController@store')->name('careers.store');
-
-Route::get('/careers', 'CareersController@index')->name('careers.index');
-Route::get('/job/{job_id}', 'CareersController@jobShow')->name('job.show');
-Route::post('/job', 'CareersController@jobStore')->name('job.store');
-Route::post('/job-reply', 'CareersController@jobReplyStore')->name('job-reply.store');
-
-Route::get('/vendors', 'VendorsController@index')->name('vendors.index');
-Route::post('/vendors', 'VendorsController@store')->name('vendors.store');
-
-Route::get('/feedback', 'FeedbackController@index')->name('feedback.index');
-Route::post('/feedback', 'FeedbackController@store')->name('feedback.store');
 
 // Admin Panel
 

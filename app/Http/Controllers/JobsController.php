@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Form;
-
-use App\Http\Controllers\Controller;
+namespace App\Http\Controllers;
 
 class JobsController extends Controller
 {
@@ -12,9 +10,10 @@ class JobsController extends Controller
 	}
 
 	public function index(){
-		$post = DB::table('job_posts')->orderBy('id', 'DESC')->where('site_code','001')->get();
-		return view('admin.laxyo.postindex', compact('post'));
+		$jobs = Job::latest()->get();
+		return view('admin.careers.index', ['jobs' => $jobs]);
 	}
+
 	public function create(){
 		$loc = DB::table('site_dropdowns')->select('*')->get();
 		return view('admin.laxyo.postcreate', compact('loc'));

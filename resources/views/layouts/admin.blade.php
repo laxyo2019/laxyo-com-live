@@ -112,8 +112,7 @@
     </header>
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
       @yield('content')
-     
-   
-         @yield('js')
+      
+      @yield('js')
 </body>
 </html>

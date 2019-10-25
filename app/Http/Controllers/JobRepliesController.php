@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Form;
+namespace App\Http\Controllers;
 
 class JobRepliesController extends Controller
 {
