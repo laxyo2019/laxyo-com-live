@@ -1,7 +1,7 @@
 ﻿@extends('layouts.app')
 @section('title','Operation and Maintenance, O & M | Laxyo Energy')
 @section('meta')
-	<meta name="description" content= "Laxyo Offer comprehensive Operation and Maintenance contracts cover all services significant to run your power plant in a safe and most economical way.  The Contact will help you in reduce your risk and increase your profit."/>    
+	<meta name="description" content= "Laxyo Offer comprehensive Operation &amp; Maintenance contracts cover all services significant to run your power plant in a safe and most economical way.  The Contact will help you in reduce your risk and increase your profit."/>  
 	<meta name="keywords" content="operation & maintenance, operation and maintenance, operation and maintenance company, operation and maintenance of power plant  "/>
 @endsection
 <!--Start TITLE PAGE-->	
@@ -37,7 +37,7 @@
 		    </div> 
 		    <div class="sub_content clearfix">
 			    <div class="col-md-7 col-sm-12">
-			    	<p>The Power Plant Department has been Laxyo's foremost department since the organization was established. We have supported the infrastructure of Indian society through power plant electrical instrumentation, <b><a href="{{url('operation_and_maintenance')}}">operation &amp; maintenance</a></b> services. Laxyo has been always fruitfully repaid, the trust that power plant contractors and/or Client organizations have placed in it. We trust in our capabilities, technical know how which plays an important role in the uninterrupted and consistent supply of power.</p>
+			    	<p>The Power Plant Department has been Laxyo's foremost department since the organization was established. We have supported the infrastructure of Indian society through power plant electrical instrumentation, <b><a href="{{url('operation-and-maintenance')}}">operation &amp; maintenance</a></b> services. Laxyo has been always fruitfully repaid, the trust that power plant contractors and/or Client organizations have placed in it. We trust in our capabilities, technical know how which plays an important role in the uninterrupted and consistent supply of power.</p>
 
 					<p>Laxyo as a Service Provider provides services for Operation and maintenance of all control systems, general electrical, instrumentation, input facilities and infrastructure apart from regular maintenance, preventive maintenance and Break down maintenance services for all equipment of Power Plant.</p>
 				</div>
@@ -75,7 +75,7 @@
 		 		<div class="row"> 
 				    <div class="col-md-9 col-sm-12">
 				    	<p><b>Cement Plants</b></p>
-				    	<p>LEL with its efficient <b><a href="{{url('/operation_and_maintenance_contractors')}}">operation and maintenance of Cement Plant</a> </b> contributes to the consistent profitability by cost reduction in cement production which is equally influenced by the efficiency and effectiveness of all personnel, systems and equipment contributing to the manufacturing process. In addition to operation and maintenance services for new cement plants or extension, LEL through its other vertical, i.e. construction wing, offers a wide range of services to assist manufacturers in the improvement of their existing plants/infrastructure In addition to operation and maintenance services for new cement plants or extension, LEL through its other vertical, i.e. construction wing, offers a wide range of services to facilities.</p>
+				    	<p>LEL with its efficient <b><a href="{{url('/operation-and-maintenance-contractors')}}">operation and maintenance of Cement Plant</a> </b> contributes to the consistent profitability by cost reduction in cement production which is equally influenced by the efficiency and effectiveness of all personnel, systems and equipment contributing to the manufacturing process. In addition to operation and maintenance services for new cement plants or extension, LEL through its other vertical, i.e. construction wing, offers a wide range of services to assist manufacturers in the improvement of their existing plants/infrastructure In addition to operation and maintenance services for new cement plants or extension, LEL through its other vertical, i.e. construction wing, offers a wide range of services to facilities.</p>
 				    </div>
 				    <div class="col-md-3 col-sm-12 marr-10">
 				    	<img class="img img-responsive" alt="operation and maintainance of cement plant" src="{{asset('img/o&m/operation-and-maintainance-cement-plant.jpg')}}">

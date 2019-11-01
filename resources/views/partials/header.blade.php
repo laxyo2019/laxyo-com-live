@@ -9,9 +9,9 @@
             </ul>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-12">
-            {{-- <a href="{{url('/vendor_registration')}}" class="pull-right vendor">
+            <a href="{{url('/vendor-registration')}}" class="pull-right vendor">
               <i class="fa fa-user"></i> &nbsp;Vendor Registration
-            </a> --}}
+            </a> 
             {{-- <a href="{{url('/career')}}" class="vendor">
               <i class="fa fa-plus" aria-hidden="true"></i> &nbsp;Career
             </a> --}}

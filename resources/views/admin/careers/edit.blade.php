@@ -7,7 +7,8 @@
     margin-top: 40px;
   }
 </style>
-<aside class="app-sidebar">
+@include('partials.admin.sidebar')
+{{-- <aside class="app-sidebar">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
         <div>
           <p class="app-sidebar__user-name">{{ Auth::user()->name }}</p>
@@ -27,7 +28,7 @@
         <li><a href="{{url('/admin-sitevars')}}" class="app-menu__item "><i class="app-menu__icon fa fa-list-alt"></i><span class="app-menu__label">Site Vars</span></a></li>
         
       </ul>
-    </aside> 
+    </aside>  --}}
 <main class="app-content">
 <div class="container">
     <div class="row pull-right"> 

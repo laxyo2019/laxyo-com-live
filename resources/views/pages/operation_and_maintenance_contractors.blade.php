@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('title','Power Plant Operation &amp; Maintenance Service, O&amp;M Contractors - Laxyo Energy Ltd.')
 @section('meta') 
-	<meta name="description" content="Laxyo Group - India based prominent service providing company for operation and maintenance services for thermal plants, coal plants, railway contractual services, thermal power plant maintenance."> 
-	<meta name="keywords" content="operation and maintenance dairy plant, operation and maintenance of cement plant, operation and maintenance contractors, operation and maintenance of power plant, operation & maintenance , operation of plant , Maintenance of Plant,  O & M services for coal plants, O & M services for thermal power plants, operation and maintenance, operation and maintenance service providers, O&M power plants, power plant o&m services, operation and maintenance thermal power plant, O & M contractors india, operation and maintenance india, list of power plant o&m companies in india, operation and maintenance companies in india, list of power plant o&m companies in india.">    
+	<meta name="description" content="Laxyo Group - India based prominent service providing company for operation and maintenance services for thermal plants, dairy plants, coal plants, railway contractual services, thermal power plant maintenance."> 
+  <meta name="keywords" content="operation and maintenance dairy plant, operation and maintenance of cement plant, operation and maintenance contractors, operation and maintenance of power plant, operation & maintenance , operation of plant , Maintenance of Plant,  O & M services for coal plants, O & M services for thermal power plants, operation and maintenance, operation and maintenance service providers, O&M power plants, power plant o&m services, operation and maintenance thermal power plant, O & M contractors india, operation and maintenance india, list of power plant o&m companies in india, operation and maintenance companies in india, list of power plant o&m companies in india."> 
 @endsection
 <!--Start TITLE PAGE-->	
 @section('body')	
@@ -53,7 +53,7 @@
       <h3>Operation and Maintenance Services for Power Plants</h3>            
     </div> 
     <div class="sub_content">
-      <p>Laxyo has been emerged as one of the prominent service providers for ‘<a href="http://www.laxyo.com/operation-and-maintenance-contractors.php">Operation &amp; Maintenance</a>’ for different sectors included private and government both. </p>
+      <p>Laxyo has been emerged as one of the prominent service providers for ‘<a href="{{'operation-and-maintenance-contractors'}}">Operation &amp; Maintenance</a>’ for different sectors included private and government both. </p>
 
       <p>We are offering operation and maintenance (O&amp;M) services largely for power plants, cement plants, chemical plants, Dairy plant etc. With an aim to expand ourselves we have started providing a wide range of services specifically for <b>coal, gas, thermal, waste heat recovery boilers and co-generation power plants, Refineries, Steel Plants, Chemical Plants, Dairy, and Cement Plants, water softening plants, turbine generators.</b></p>
 
@@ -111,7 +111,7 @@
         </ul>
       </div>
       <div class="widget_content info">
-        <p>Our process of complete Operation and Maintenance is included with a complete plan which is based on latest market trends, quantity, quality, pricings. Understand the requirement of customers and provides to them with best optimal plan for <a href="{{('operation_and_maintenance_contractors')}}">Operation and Maintenance Services</a>. Owner can also be delight with our online/offline MIS system. </p>
+        <p>Our process of complete Operation and Maintenance is included with a complete plan which is based on latest market trends, quantity, quality, pricings. Understand the requirement of customers and provides to them with best optimal plan for <a href="{{('operation-and-maintenance-contractors')}}">Operation and Maintenance Services</a>. Owner can also be delight with our online/offline MIS system. </p>
       </div>
     </div>
   </div>

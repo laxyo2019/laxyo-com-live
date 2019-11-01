@@ -16,4 +16,8 @@ class HomeController extends Controller
   {
     return view('admin.index');
   }
+
+  public function site_variables(){
+  	
+  }
 }

@@ -30,7 +30,6 @@
 		</div>
 	</div>
 </div>
-
 <div class="row">
 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 	<div class="alert alert-success hidden alert-dismissable" id="contactSuccess">
@@ -46,7 +45,7 @@
         {{ session('vender_message') }}
     </div>
    @endif
-	<form id="vendorform" action="{{url('/vendorform')}}" method="POST" enctype="multipart/form-data" class="jogjaContact">
+	<form id="vendorform" action="{{url('/vendor-registration')}}" method="POST" enctype="multipart/form-data" class="jogjaContact">
 			{{csrf_field()}}
 		<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12">
@@ -142,29 +141,29 @@
 					</div>
 				</div>
 		</div>
-	
+{{-- 	
 		<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12">
-					<div class="col-md-3 col-lg-3 col-sm-12">
-						<label class="marr">Nature Of Business <span style="color: #F34D2C;">*</span></label>
-					</div>
-					<div class="col-md-9 col-lg-9 col-sm-12">
-
-						<select name="nature_business" class="form-control select-cont" value="">
-							<option value="0">select</option>
-							@foreach($users as $user)
-							   @if($user->site_code == '001' && $user->tag == 'bussiness_nature')
-                               <option value="{{$user->title}}">{{$user->title}}</option>
-                               @endif
-							@endforeach
-			             </select>
-				         @error('nature_business')
-                         <p class="text-danger">{{ $message }}</p>
-                          @enderror
-				        	
-					</div>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="col-md-3 col-lg-3 col-sm-12">
+					<label class="marr">Nature Of Business <span style="color: #F34D2C;">*</span>
+					</label>
 				</div>
-		</div>
+				<div class="col-md-9 col-lg-9 col-sm-12">
+				<select name="nature_business" class="form-control select-cont" value="">
+					<option value="0">select</option>
+					@foreach($users as $user)
+					   @if($user->site_code == '001' && $user->tag == 'bussiness_nature')
+                       <option value="{{$user->title}}">{{$user->title}}</option>
+                       @endif
+					@endforeach
+	             </select>
+		         @error('nature_business')
+                 <p class="text-danger">{{ $message }}</p>
+                  @enderror
+		        	
+				</div>
+			</div>
+		</div> --}}
 
 		<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12">

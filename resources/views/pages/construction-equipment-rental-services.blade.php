@@ -56,11 +56,11 @@
         <h3>Rental Services Earthmoving Equipment in India</h3>            
       </div> 
       <div class="sub_content">
-        <p>Laxyo Energy Ltd. is aiming to be India's largest service providing company in renting/leasing of <a href="construction-equipment-rental-services.php">Construction equipments</a>, specialized in various class of machinery.</p>
+        <p>Laxyo Energy Ltd. is aiming to be India's largest service providing company in renting/leasing of <a href="{{'construction-equipment-rental-services'}}">Construction equipments</a>, specialized in various class of machinery.</p>
 
         <p>We provides a unique rental proposition - an alternative to "buy". With our strong equipment strength &amp; highly qualified professional team we cater to various industry verticals like constructions, civil work, mechanical, electrical and instrumentation engineering.</p>
 
-        <p>We have inventory in construction equipment, machinery, tools, and supplies, including: <a href="construction-equipment-rental-services.php">Earthmoving Equipment</a>, Concrete Equipment, Material Handling Equipment, Road Construction Equipment and much more. We provide construction equipment on rent at cost effective prices for a flexible length of time. These equipments are widely used for different kinds of building construction and repair.</p>
+        <p>We have inventory in construction equipment, machinery, tools, and supplies, including: <a href="{{'construction-equipment-rental-services'}}">Earthmoving Equipment</a>, Concrete Equipment, Material Handling Equipment, Road Construction Equipment and much more. We provide construction equipment on rent at cost effective prices for a flexible length of time. These equipments are widely used for different kinds of building construction and repair.</p>
 
         <blockquote class="default">
           <p>You'll get all types of Equipment as according to your need within period of 7 days..So Hurry Up</p>

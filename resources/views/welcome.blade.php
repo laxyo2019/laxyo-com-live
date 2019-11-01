@@ -29,7 +29,7 @@
                         <div class="col-md-12">
                             <h3>Railway Contractors</h3>
                             <span>Our major services for railway is included with taking over all railways contracts related to operation, maintenance, improving railways track laying etc.</span><br><br>
-                            <a href="{{url('/railway_contractors')}}" class="btn btn-primary">Learn More</a>
+                            <a href="{{url('/railway-contractors')}}" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>                   
                     <!-- /header-text -->
@@ -42,7 +42,7 @@
                         <div class="col-md-12">
                             <h3>Operation and Maintenance Contractors</h3>
                             <span>Laxyo group now has become one of the leading Operation and Maintenance Service Company in India. Our reorganization is created by our work. </span><br><br>
-                            <a href="{{url('/operation_and_maintenance_contractors')}}" class="btn btn-primary">Learn More</a>
+                            <a href="{{url('/operation-and-maintenance-contractors')}}" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
                     <!-- /header-text -->
@@ -55,7 +55,7 @@
                         <div class="col-md-12">
                             <h3>Mining Services</h3>
                             <span>Laxyo group leaves strong foot print in recently started mining vertical also, where we offer diversified range of service contracts as per requirement of mining.</span><br><br>
-                            <a href="{{url('/mining_services')}}" class="btn btn-primary">Learn More</a>
+                            <a href="{{url('/mining-services')}}" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
                     <!-- /header-text -->
@@ -68,7 +68,7 @@
                         <div class="col-md-12">
                             <h3>Dredging and Reclamation</h3>
                             <span>LAXYO ENERGY LIMITED's dredging verticle started its December in 2015. We are part of Laxyo Group, a reputable, Madhya Pradesh based group of companies with a lineage of more than 50 years.</span><br><br>
-                            <a href="{{url('dredging_and_reclamation')}}" class="btn btn-primary">Learn More</a>
+                            <a href="{{url('dredging-and-reclamation')}}" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
                     <!-- /header-text -->
@@ -143,7 +143,7 @@
                           <div class="project_container">
                             <div class="img_hover"> <img src="{{asset('images/railway-contractors.jpg')}}" alt="railway contractors"> <a class="hover_link" href="{{url('railway_contractors')}}"><span><i class="fa fa-link"></i></span></a> <a class="hover_view mfp-image" href="{{asset('images/railway-contractors.jpg')}}"><span><i class="fa fa-search"></i></span></a> </div>
                             <div class="project_info">
-                              <h4> <a href="{{url('railway_contractors')}}">Railway Contractors</a> </h4>
+                              <h4> <a href="{{url('railway-contractors')}}">Railway Contractors</a> </h4>
                               <p>Railways contracts related to operation, maintenance, improving railways track laying linking, private railway siding etc. in all over India.</p> </div>
                           </div>
                         </div>
@@ -155,7 +155,7 @@
                         <div class="project_container">
                           <div class="img_hover"> <img src="{{asset('images/opetations-and-maintenance.jpg')}}" alt="opetations and maintenance"> <a class="hover_link" href="{{url('operation_and_maintenance_contractors')}}"><span><i class="fa fa-link"></i></span></a> <a class="hover_view mfp-image" href="{{asset('images/opetations-and-maintenance.jpg')}}"><span><i class="fa fa-search"></i></span></a> </div>
                           <div class="project_info">
-                            <h4> <a href="{{url('operation_and_maintenance_contractors')}}">Operation and Maintenance Contractors</a> </h4>
+                            <h4> <a href="{{url('operation-and-maintenance-contractors')}}">Operation and Maintenance Contractors</a> </h4>
                             <p>O&amp;M services based on verticals, commissioning and breakdown maintenance services for equipments. </p>
                           </div>
                         </div>
@@ -168,7 +168,7 @@
                         <div class="project_container">
                           <div class="img_hover"> <img src="{{asset('images/mining-services-companies.jpg')}}" alt="mining services companies"> <a class="hover_link" href="{{url('mining_services')}}"><span><i class="fa fa-link"></i></span></a> <a class="hover_view mfp-image" href="{{asset('images/mining-services-companies.jpg')}}"><span><i class="fa fa-search"></i></span></a> </div>
                           <div class="project_info">
-                            <h4> <a href="{{url('mining_services')}}">Mining Services</a> </h4>
+                            <h4> <a href="{{url('mining-services')}}">Mining Services</a> </h4>
                             <p>Laxyo group mining services for Large scale to small scale mining. </p>
                           </div>
                         </div>
@@ -179,9 +179,9 @@
                   <div class="item">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="project_container">
-                          <div class="img_hover"> <img src="{{asset('images/dredging-and-reclamation.jpg')}}" alt="dredging and reclamation"> <a class="hover_link" href="{{url('dredging_and_reclamation')}}"><span><i class="fa fa-link"></i></span></a> <a class="hover_view mfp-image" href="{{asset('images/dredging-and-reclamation.jpg')}}"><span><i class="fa fa-search"></i></span></a> </div>
+                          <div class="img_hover"> <img src="{{asset('images/dredging-and-reclamation.jpg')}}" alt="dredging and reclamation"> <a class="hover_link" href="{{url('dredging-and-reclamation')}}"><span><i class="fa fa-link"></i></span></a> <a class="hover_view mfp-image" href="{{asset('images/dredging-and-reclamation.jpg')}}"><span><i class="fa fa-search"></i></span></a> </div>
                           <div class="project_info">
-                            <h4> <a href="{{url('dredging_and_reclamation')}}">Dredging &amp; Reclamation </a> </h4>
+                            <h4> <a href="{{url('dredging-and-reclamation')}}">Dredging &amp; Reclamation </a> </h4>
                             <p>Laxyo Group dredging and reclamation services underwater excavation of silt , soil and land.</p>  
                           </div>
                         </div>
@@ -192,9 +192,9 @@
                   <div class="item">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="project_container">
-                          <div class="img_hover"> <img src="{{asset('images/renewable-energy-system.jpg')}}" alt="renewable energy system"> <a class="hover_link" href="{{url('renewable_energy_system')}}"><span><i class="fa fa-link"></i></span></a> <a class="hover_view mfp-image" href="{{asset('images/renewable-energy-system.jpg')}}"><span><i class="fa fa-search"></i></span></a> </div>
+                          <div class="img_hover"> <img src="{{asset('images/renewable-energy-system.jpg')}}" alt="renewable energy system"> <a class="hover_link" href="{{url('renewable-energy-system')}}"><span><i class="fa fa-link"></i></span></a> <a class="hover_view mfp-image" href="{{asset('images/renewable-energy-system.jpg')}}"><span><i class="fa fa-search"></i></span></a> </div>
                           <div class="project_info">
-                            <h4> <a href="{{url('renewable_energy_system')}}">Renewable Energy System </a> </h4>
+                            <h4> <a href="{{url('renewable-energy-system')}}">Renewable Energy System </a> </h4>
                             <p>Solar power plant design, installation, supply, erection, commissioning and o&amp;m of roof top and land based.</p>  
                           </div>
                         </div>
@@ -205,9 +205,9 @@
                   <div class="item">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="project_container">
-                          <div class="img_hover"> <img src="{{asset('images/heavy-equipment-rental-services.jpg')}}" alt="heavy equipment rental services"> <a class="hover_link" href="{{url('heavy_equipment_rental_services')}}"><span><i class="fa fa-link"></i></span></a> <a class="hover_view mfp-image" href="{{asset('images/heavy-equipment-rental-services.jpg')}}"><span><i class="fa fa-search"></i></span></a> </div>
+                          <div class="img_hover"> <img src="{{asset('images/heavy-equipment-rental-services.jpg')}}" alt="heavy equipment rental services"> <a class="hover_link" href="{{url('heavy-equipment-rental-services')}}"><span><i class="fa fa-link"></i></span></a> <a class="hover_view mfp-image" href="{{asset('images/heavy-equipment-rental-services.jpg')}}"><span><i class="fa fa-search"></i></span></a> </div>
                           <div class="project_info">
-                            <h4> <a href="{{url('heavy_equipment_rental_services')}}">Heavy Equipment Rental Services</a> </h4>
+                            <h4> <a href="{{url('heavy-equipment-rental-services')}}">Heavy Equipment Rental Services</a> </h4>
                             <p>We are aiming to be India's leading service providing company in renting/leasing.</p>  
                           </div>
                         </div>

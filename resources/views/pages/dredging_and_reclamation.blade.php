@@ -1,8 +1,9 @@
 @extends('layouts.app')
 @section('title','Dredging Contractors, Dredger Rental Equipment Companies and Dredger Owners in India')
 @section('meta')  
-  <meta name="description" content= "Laxyo Group of dredging contractors provides dredging equipment rental, small dredge on lease, dredger on rent and land & reclamation service in India."/>    
-  <meta name="keywords" content="Dredger service providers, dredger on rent, dredger owners in india, dredging equipment on rent, dredging equipment rental, rental dredging equipment, list of dredging companies in india, small dredge on lease, dredging contractors, Dredging companies in India, Dredging Machine and Contractors in India, dredgers and land reclamation service, dredging and reclamation, dredging contractors in india"/>  
+  <meta name="description" content= "Laxyo Group of dredging contractor provides dredging equipment rental, dredger owners in india, Dredger service providers, Dredging and Reclamation, dredger on rent, list of dredging companies in india, Dredging services in India, small dredger for rent, rental dredging equipment, dredging equipment on rent, CSD dredger on lease, "/>
+
+  <meta name="keywords" content="Dredger service providers, Dredging and Reclamation, dredger on rent, dredger owners in india, dredging equipment on rent, dredging equipment rental, rental dredging equipment, list of dredging companies in india, small dredger for rent, dredging contractor, Dredging companies in India, Dredging Machine and Contractors in India, dredgers and land reclamation service, dredging contractors in india, CSD dredger on lease"/>
 @endsection
 
 <!--Start TITLE PAGE-->	
@@ -55,7 +56,7 @@
         <h3>Dredging Contractors </h3>            
       </div> 
       <div class="sub_content">
-        <p>LAXYO ENERGY LIMITED's dredging vertical started in December 2015. We are part of Laxyo Group, a reputable, Madhya Pradesh based group of companies with a lineage of more than 50 years. We are here to provide unparalleled services to our clients. We offer <a href="{{url('dredging_and_reclamation')}}">dredging and land reclamation services</a> including operation and maintenance of portable dredgers. Backed by an enthusiastic team of qualified experts, we aim to establish ourselves in the private sector as a major dredging company.</p>
+        <p>LAXYO ENERGY LIMITED's dredging vertical started in December 2015. We are part of Laxyo Group, a reputable, Madhya Pradesh based group of companies with a lineage of more than 50 years. We are here to provide unparalleled services to our clients. We offer <a href="{{url('dredging-and-reclamation')}}">dredging and land reclamation services</a> including operation and maintenance of portable dredgers. Backed by an enthusiastic team of qualified experts, we aim to establish ourselves in the private sector as a major dredging company.</p>
 
         <div class="widget_content info">
         <p>Our dredging services include:</p>
@@ -96,7 +97,7 @@
         </div>
 
         <div class="widget_content info">
-          <p>With strict attention to quality of service, we want to maintain transparency with our clients, employees, business associates, the society and the environment. We as <a href="http://www.laxyo.com/dredging-and-reclamation.php">dredging contractors</a> have blended corporate social responsibilities and growth strategies and have put in place efficient systems to ensure the safety of our employees and the safety of the environment.</p>
+          <p>With strict attention to quality of service, we want to maintain transparency with our clients, employees, business associates, the society and the environment. We as <a href="{{url('dredging-and-reclamation')}}">dredging contractors</a> have blended corporate social responsibilities and growth strategies and have put in place efficient systems to ensure the safety of our employees and the safety of the environment.</p>
         </div>
 
         <div class="widget_content info">

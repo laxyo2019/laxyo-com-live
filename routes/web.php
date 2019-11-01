@@ -20,7 +20,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
 Route::view('/about', 'pages.about');
 Route::view('/clients', 'pages.clients');
 Route::view('/services', 'pages.services');
-Route::view('/laxyo-group-companies', 'pages.laxyo_group_companies');
+Route::view('/laxyo-group-companies', 'pages.laxyo-group-companies');
 Route::view('/operation-and-maintenance', 'pages.operation_and_maintenance');
 Route::view('/infrastructure', 'pages.infrastructure');
 Route::view('/railway-contractors', 'pages.railway_contractors');
@@ -30,9 +30,12 @@ Route::view('/amphibious-excavator', 'pages.amphibious_excavator');
 Route::view('/material-handling-contractor', 'pages.material-handling-contractor');
 Route::view('/operation-and-maintenance-contractors', 'pages.operation_and_maintenance_contractors');
 Route::view('/dredging-and-reclamation', 'pages.dredging_and_reclamation');
-Route::view('/construction-equipment-rental-services', 'pages.construction_equipment_rental_services');
+Route::view('/construction-equipment-rental-services', 'pages.construction-equipment-rental-services');
+Route::resource('/contact', 'ContactController');
 Route::view('/contact', 'pages.contact');
 Route::view('/careers', 'pages.careers');
+Route::get('vendor-registration', 'VendorsController@create');
+Route::post('vendor-registraiton', 'VendorsController@store');
 
 
 // Admin Panel
@@ -49,7 +52,7 @@ Route::view('/careers', 'pages.careers');
 // Route::get('/admin-feedback', 'AdminController@feedback');
 // Route::delete('/admin/{id}', 'AdminController@fdestroy')->name('fdel');
 // Route::get('/admin-contact', 'AdminController@contact');
-// Route::delete('/admin-contact/{id}', 'AdminController@condestroy')->name('contactdel');
+Route::delete('/admin-contact/{id}', 'AdminController@condestroy')->name('contactdel');
 // Route::get('/admin-vender', 'AdminController@vender');
 // Route::delete('/admin-vender/{id}', 'AdminController@vdestroy')->name('venderdel');
 // Route::get('/admin-download-vendor-file', 'AdminController@download_vendor')->name('dwld_vendor');

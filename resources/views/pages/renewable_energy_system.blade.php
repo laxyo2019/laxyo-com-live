@@ -2,8 +2,7 @@
 @section('title','Renewable Energy System | Laxyo Energy Ltd.')
 @section('meta')
   <meta name="description" content= "Laxyo renewable energy system in India for energy cost reducation with proper optimized use of electricity."/>    
-  <meta name="keywords" content="renewable energy system, renewable energy India, energy audit service, energy auditor, sustainable energy, home renewable energy system, office renewable energy system, solar power consultants,
-operation and maintenance of solar power plant, Rooftop systems for home, solar power consultancy firm, spv solar power plant."/> 
+  <meta name="keywords" content="renewable energy system, renewable energy India, energy audit service, energy auditor, sustainable energy, home renewable energy system, office renewable energy system, solar power consultants, operation and maintenance of solar power plant, Rooftop systems for home, solar power consultancy firm, spv solar power plant."/> 
 @endsection
 
 <!--Start TITLE PAGE-->

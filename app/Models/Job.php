@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Job extends Model
 {
 	protected $fillable = [];
+
+	protected $table = 'job_posts';
 	
 	public function replies()
 	{

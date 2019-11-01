@@ -9,27 +9,8 @@
     margin-bottom: 50px;
   }
 </style>
-<aside class="app-sidebar">
-      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
-        <div>
-          <p class="app-sidebar__user-name">{{ Auth::user()->name }}</p>
-         
-        </div>
-      </div>
-      <ul class="app-menu">
-        <li><a class="app-menu__item active" href="{{url('/home')}}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
-        <li>
-        <a href="{{url('/admin-career')}}" class="app-menu__item"><i class="app-menu__icon fa fa-graduation-cap"></i><span class="app-menu__label">Career</span></a>
-        </li>
-         <li><a href="{{url('/admin-vender')}}" class="app-menu__item "><i class="app-menu__icon fa  fa-registered"></i><span class="app-menu__label">Vender Registration</span></a></li>
-          <li><a href="{{url('/admin-contact')}}" class="app-menu__item "><i class="app-menu__icon fa fa-address-book"></i><span class="app-menu__label">Contact</span></a></li>
-        <li><a href="{{url('/admin-feedback')}}" class="app-menu__item "><i class="app-menu__icon fa fa-comments-o"></i><span class="app-menu__label">Feedback</span></a></li>
-                  
-        <li><a href="{{url('/admin-post')}}" class="app-menu__item active"><i class="app-menu__icon fa fa-tasks"></i><span class="app-menu__label">Job Post</span></a></li>
-        <li><a href="{{url('/admin-sitevars')}}" class="app-menu__item "><i class="app-menu__icon fa fa-list-alt"></i><span class="app-menu__label">Site Vars</span></a></li>
-        
-      </ul>
-    </aside> 
+@include('partials.admin.sidebar')
+
 <main class="app-content">
 <div class="container">
   <div class="app-title">
@@ -45,7 +26,7 @@
 <div class="row">
   <div class="col-md-12"  >
     <button class="btn btn-info" type="submit" id="bulk_delete_post">Delete</button>
-    <a href="{{route('admin-post.create')}}" class="btn btn-primary" style="float: right">Add New Post</a>
+    <a href="{{route('admin.jobs.create')}}" class="btn btn-primary" style="float: right">Add New Post</a>
   </div>
   </div>
 

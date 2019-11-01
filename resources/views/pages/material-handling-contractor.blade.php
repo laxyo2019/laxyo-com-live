@@ -2,7 +2,7 @@
 @section('title','Material Handling Contractor | Raw Material, Bulk, Internal Material Handling')
 @section('meta')
   <meta name="description" content= "We are the leading raw and bulk material handling contractor providing services of mechanical contracting for the installation and maintenance of systems for all the plants."/>    
-  <meta name="keywords" content="material handling contractor, material handling, material handling in cement plant, raw material handling, bulk material handling, internal material handling, material handling service provider, material handling company, bulk material handling company, construction material handling plan"/> 
+  <meta name="keywords" content="material handling contractor, material handling, material handling in cement plant, raw material handling, bulk material handling, internal material handling, material handling service provider, material handling company, bulk material handling company, construction material handling plan"/>
 @endsection
 
 <!--Start TITLE PAGE-->	

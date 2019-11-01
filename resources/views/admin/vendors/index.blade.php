@@ -40,11 +40,7 @@
         <th >Action</th>
 			</tr>
 			</thead>
-			     
 			<tbody>
-        @foreach($site_domain as $domain)
-            <?php $domain = $domain->site_domain;  ?>
-        @endforeach
 				@foreach($data as $vender)
 				<tr>
 					<td><input type="checkbox" class="sub_chk_vender" data-id="{{$vender->id}}"></td>

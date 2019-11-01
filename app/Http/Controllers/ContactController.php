@@ -28,9 +28,9 @@ class ContactController extends Controller
 
 	  $contact = Contact::create($vdata);
 
-	  $user1 = User::find(1); // info@laxyo.com
+	  /*$user1 = User::find(1); // info@laxyo.com
 	  $user2 = User::find(2); // hr2@yolaxinfra.com
-  	Mail::to($user1)->cc([$user2])->send(new SendMailCompany($vdata));
+  	Mail::to($user1)->cc([$user2])->send(new SendMailCompany($vdata));*/
 
   	return back()->with('message', 'Thank You for contacting us, we will contact you soon...');
   }

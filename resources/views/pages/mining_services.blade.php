@@ -61,7 +61,7 @@
         <p>We complete every project in the direction of industry experts and works as to develop plan for new mines, enhancing productivity of existing opened mines. We are growing as one of the leading mining consultancy from India, working with exceptional mining plan, scheduling, feasibility test, optimization of productivity, electronic machine monitoring benchmarking services. </p>
 
         <div class="widget_content info">
-        <p>Taking over the projects based on large scale mining and small scale mining. Our major <a href="{{url('mining_services')}}">mining services</a> are included with:</p>
+        <p>Taking over the projects based on large scale mining and small scale mining. Our major <a href="{{url('mining-services')}}">mining services</a> are included with:</p>
         <ul class="list_style">
           <li><i class="fa fa-check-square"></i> Geology and mining</li>
           <li><i class="fa fa-check-square"></i> Mineral processing</li>

@@ -70,7 +70,7 @@
 
       <p>With our accomplished railway work we are concentrating and largely working on: </p>
 
-      <p><b><a href="{{url('railway_contractors')}}">Railways track laying</a> services</b>, we avails right track formation , concerns to drainage, preparation of land, ballast process, sleepers made with concrete, offloading of rails, tamping, and finishing work. Complete new track formation. Gauge conversion for railways, earth works which are integral part of complete railway services. Railway track laying operation and maintenance requires efficient persons and machineries. We help you with efficient methodology and work accuracy. </p>
+      <p><b><a href="{{url('railway-contractors')}}">Railways track laying</a> services</b>, we avails right track formation , concerns to drainage, preparation of land, ballast process, sleepers made with concrete, offloading of rails, tamping, and finishing work. Complete new track formation. Gauge conversion for railways, earth works which are integral part of complete railway services. Railway track laying operation and maintenance requires efficient persons and machineries. We help you with efficient methodology and work accuracy. </p>
 
       <p><b>Railways construction projects</b> as of platforms, sheds, railway siding, electrifications, signalling, telecommunications, pavements road works. Supply required materials for P way, overhead electrification materials etc. </p>
 
@@ -88,7 +88,7 @@
 
       <p><b>Material supply</b> for P way, overhead electrification materials etc. </p>
 
-      <p>We are very active and updated with all latest market progress, thus we gives the best solution to all <a href="{{url('railway_contractors')}}">railway projects</a>. Full of strength, capacity, proper management system and quality to offer work done with speed.</p>
+      <p>We are very active and updated with all latest market progress, thus we gives the best solution to all <a href="{{url('railway-contractors')}}">railway projects</a>. Full of strength, capacity, proper management system and quality to offer work done with speed.</p>
 
     </div>
     <section>
