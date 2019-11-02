@@ -1,20 +1,34 @@
 @extends('layouts.app')
 @section('title','Career Form For Apply - Laxyo Energy Limited')
-
-	
 <style>
-
+  .card{
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .card-footer a{
+    border-radius: 40px;
+    font-size: 10px;
+    
+  }
+  .newgif{
+    width: 20%;
+    float: left;
+  }
 </style>
 <!--Start TITLE PAGE-->	
-@section('body')	
-<section class="title_page bg_3">			
+@section('body')
+<section class="title_page bg_3">		
+
+
 <div class="container">				
-<div class="row">					
+<div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12">						
 <h2>Career</h2>						
 <nav id="breadcrumbs">							
 <ul>								
-<li><a href="{{url('/')}}">Home</a></li>															
+<li><a href="{{url('/')}}">Home</a></li>			
+
+
 <li>Career</li>							
 </ul>						
 </nav>					
@@ -22,8 +36,8 @@
 </div>			
 </div>		
 </section>		
-<!--End TITLE PAGE-->				
-		
+<!--End TITLE PAGE-->
+<section class="content sb_right"> 
 <div class="container">				
 <div class="row">					
 	<div class="col-lg-12 col-md-12 col-sm-12 effect-slide-bottom in">
@@ -32,68 +46,68 @@
 		</div>
 	</div>
 </div>
-
-
 	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
 		
 		<div class="row">
       <div class="col-md-12 col-sm-12">
-            <a href="{{url('/career')}}" style="font-size: 20px;">back</a>
+            <a href="{{url('/careers')}}" style="font-size: 20px;">back</a>
             <hr>
+      </div>
+      <div class="col">
+        @if(session()->get('success'))
+          <div class="alert alert-success">
+            {{ session()->get('success') }}  
+          </div><br />
+        @endif
       </div>
 			 <div class="col-md-12">
 		
-			 <form id="careerform" action="{{ action('CareerController@submit') }}" method="post" class="form" enctype="multipart/form-data">
+			 <form id="careerform" action="{{route('submit.career', ['id' => $post->id])}} {{-- {{ action('CareerController@submit') }} --}}" method="post" class="form" enctype="multipart/form-data">
       	     <div class="card form-group">
       	     @csrf
       	     <div class="card-header bg-primary">
       	     	Career Apply Form
       	     </div>
       	     <div class="card-body">
-              		 
 		      	      <input type="hidden" id="job_id" class="form-control" name="job_id" value="{{$post->id}}">
-		             
                      <div class="row">
              			<div class="col-md-6">
                         <input class="form-control" name="name" placeholder="Your Full Name (**Mandatory)" type="text" value="{{old('name')}}" required="required">
 	                    @if ($errors->has('name'))
-						    <div class="error text-danger">{{ $errors->first('name') }}</div>
-						@endif
+						            <div class="error text-danger">{{ $errors->first('name') }}</div>
+						          @endif
 	                    </div>
-
 	                    <div class="col-md-6">
 	                        <input class="form-control" name="email" placeholder="Your Email (**Mandatory)" type="text" required="required" value="{{old('email')}}">
 	                        @if ($errors->has('email'))
-						    <div class="error text-danger">{{ $errors->first('email') }}</div>
-						@endif
+						              <div class="error text-danger">{{ $errors->first('email') }}</div>
+						          @endif
                     	</div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <input class="form-control" maxlength="10"  name="mobileno" placeholder="Your Mobile Number (**Mandatory)" type="text" required="required" value="{{old('mobileno')}}">
                                 @if ($errors->has('mobileno'))
-								    <div class="error text-danger">{{ $errors->first('mobileno') }}</div>
-								@endif
+								      <div class="error text-danger">{{ $errors->first('mobileno') }}</div>
+								      @endif
                             </div>
                             <div class="col-md-6">
                                 <input class="form-control" id="careeraddress" name="address" placeholder="Your Address" onFocus="geolocate()" type="text" value="{{old('address')}}">
                             </div>
                         </div>
                         
-                    	<textarea class="form-control" rows="6" name="about" placeholder="Tell Us Amazing about You...">{{old('about')}}</textarea>
+                    	<textarea class="form-control" rows="6" name="about" placeholder="Tell us amazing about You...">{{old('about')}}</textarea>
                     
                          <div class="row">
                          @if($post->resume_req == '1')
-                                 <div class="col-md-12">
+                              <div class="col-md-12">
 			                        <div class="form-group">
 			                            <label for="exampleInputFile">Attached Resume Here</label>
 			                            <input id="file" name="file" type="file">
 			                            <p class="help-block">Attach .doc, .pdf files only (Min of 3MB)</p>
 			                        </div>
 			                        </div>
-			                 
-    			              @else
-    			               
+    			               @else
     			                 	<div class="col-md-12">
     			                 		Not Need
     			                 	</div>
@@ -111,7 +125,7 @@
 				        <div class="row">
 				            <div class="col-md-8">
 				             <div class="col-md-6">
-				             <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+				             <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha" autocomplete="off">
                              </div>
                              <div class="col-md-6">
                              	@if ($errors->has('captcha'))

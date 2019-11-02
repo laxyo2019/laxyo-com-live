@@ -29,7 +29,6 @@
     <a href="{{route('admin.jobs.create')}}" class="btn btn-primary" style="float: right">Add New Post</a>
   </div>
   </div>
-
 <div class="uper">
   @if(session()->get('success'))
     <div class="alert alert-success">
@@ -51,28 +50,30 @@
           <td style="width: 5%"> <input type="checkbox" id="selectall_post" name="selectall_post"></td>
           <td style="width: 10%">Job Title</td>
           <td style="width: 10%">Location</td>
-          <td style="width: 10%">Experience</td>
-          <td style="width: 20%">Description</td>
+          <td style="width: 20%" colspan="2">Experience</td>
+          {{-- <td style="width: 20%">Description</td> --}}
           <td style="width: 5%">Resume Necessary</td>
           <td style="width: 20%" colspan="2">Salary Range</td>
-          <td style="width: 5%">Closing Date</td>
+          <td style="width: 20%" colspan="2">Duration</td>
           <td style="width: 5%">Candidate Count</td>
-          <td>Active</td>
+          {{-- <td>Active</td> --}}
           <td style="width: 10%">Action</td>
         </tr>
         <tr>
           <td style="width: 5%"></td>
           <td style="width: 10%"></td>
           <td style="width: 10%"></td>
-          <td style="width: 10%"></td>
-          <td style="width: 20%"></td>
+          <td style="width: 10%">Min Exp</td>
+          <td style="width: 10%">Max Exp</td>
+          {{-- <td style="width: 20%"></td> --}}
           <td style="width: 5%"></td>
           <td style="width: 10%">From</td>
           <td style="width: 10%">To</td>
+          <td style="width: 10%">From</td>
+          <td style="width: 10%">To</td>
           <td style="width: 5%"></td>
-          <td></td>
-          <td style="width: 5%"></td>
-          <td style="width: 10%"></td>
+          {{-- <td style="width: 10%"></td> --}}
+          <td></td> 
         </tr>
     </thead>
     <tbody>
@@ -80,31 +81,31 @@
             <tr>
              <td><input type="checkbox" class="sub_chk_post" data-id="{{$posts->id}}"></td>
              <td>{{$posts->job_title}}</td>
-             <td>{{$posts->job_location}}</td> 
-             <td>{{$posts->exp}}</td>
-             <td><?php echo $posts->job_desc ?></td>
-             <td>{{$posts->resume_req}}</td>
+             <td>{{$posts->job_location}}</td>
+             <td>{{$posts->min_exp}}</td>
+             <td>{{$posts->max_exp}}</td>
+             {{-- <td>{{$posts->job_desc}}</td> --}}
+             <td>{{$posts->resume_req == 1 ? 'Yes' : 'No'}}</td>
              <td>{{$posts->sal_min}}</td>
              <td>{{$posts->sal_max}}</td>
+             <td>{{$posts->open_dt}}</td>
              <td>{{$posts->close_dt}}</td>
-             <td>{{$posts->cand_count}}</td> 
-             @if($posts ->active == 1)
+             <td>{{$posts->no_of_pos}}</td>
+             {{-- @if($posts->active == 1)
                 <td>True</td>
              @else
                  <td>False</td>
-             @endif       
+             @endif  --}}      
              <td>
-               <a href="admin-post/{{$posts->id}}/edit" class="text-primary"><span class="fa fa-edit fa-lg"></span></a>
+               <a href="{{route('admin.jobs.edit', ['id' => $posts->id])}}" class="text-primary"><span class="fa fa-edit fa-lg"></span></a>
                 <a href="#" class="text-danger" onclick="event.preventDefault(); if(confirm('Are you sure?')){
                   document.getElementById('delete-form-{{ $posts->id }}').submit();}"><span class="fa fa-trash fa-lg"></span></a>
 
-                  <form id="delete-form-{{ $posts->id }}" action="{{ route('admin-post.destroy', $posts->id) }}" method="POST" style="display: none;">
+                  <form id="delete-form-{{ $posts->id }}" action="{{ route('admin.jobs.destroy', $posts->id) }}" method="POST" style="display: none;">
                       @csrf
                       @method('delete')
                   </form>
-
              </td>
-
             </tr>
          @endforeach
     </tbody>

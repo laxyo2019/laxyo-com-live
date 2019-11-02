@@ -15,9 +15,11 @@
 <li><a href="{{url('/')}}">Home</a></li>															
 <li>Vendor Registration</li>							
 </ul>						
-</nav>					
+</nav>	
+
 </div>				
-</div>			
+</div>	
+
 </div>		
 </section>		
 <!--End TITLE PAGE-->				
@@ -29,6 +31,14 @@
 			<h1>Vendor <span>Registration</span></h1>			
 		</div>
 	</div>
+	
+	<div class="col">
+		@if(session()->get('success'))
+    		<div class="alert alert-success">
+    			{{ session()->get('success') }}  
+    		</div><br />
+  		@endif
+  	</div>
 </div>
 <div class="row">
 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
@@ -51,7 +61,6 @@
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<div class="col-md-3 col-lg-3 col-sm-12">
 						<label class="marr">Company Name <span style="color: #F34D2C;">*</span></label>
-
 					</div>
 					<div class="col-md-9 col-lg-9 col-sm-12">
 						<input id="cname" name="company_name" class="form-control" maxlength="100" value="{{old('company_name')}}" placeholder="Company Name" type="text">
@@ -74,7 +83,6 @@
 						</div>
 					</div>
 			</div>
-
 		<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<div class="col-md-3 col-lg-3 col-sm-12">
@@ -227,7 +235,7 @@
 					<div class="row">
 				            <div class="col-md-8">
 				             <div class="col-md-6">
-				             <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+				             <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha" autocomplete="off">
                              </div>
                              <div class="col-md-6">
                              	@if ($errors->has('captcha'))

@@ -29,13 +29,20 @@ Route::view('/renewable-energy-system', 'pages.renewable_energy_system');
 Route::view('/amphibious-excavator', 'pages.amphibious_excavator');
 Route::view('/material-handling-contractor', 'pages.material-handling-contractor');
 Route::view('/operation-and-maintenance-contractors', 'pages.operation_and_maintenance_contractors');
+Route::view('/pway-signaling-and-telecom-material', 'pages.pway-signaling-and-telecom-material-supplier');
 Route::view('/dredging-and-reclamation', 'pages.dredging_and_reclamation');
 Route::view('/construction-equipment-rental-services', 'pages.construction-equipment-rental-services');
 Route::resource('/contact', 'ContactController');
 Route::view('/contact', 'pages.contact');
-Route::view('/careers', 'pages.careers');
+Route::view('/career', 'pages.careers');
 Route::get('vendor-registration', 'VendorsController@create');
-Route::post('vendor-registraiton', 'VendorsController@store');
+Route::post('vendor-registration', 'VendorsController@store');
+//For job apply
+
+Route::get('/careers', 'PagesController@careerindex');
+Route::get('/career-detail/{id}', 'PagesController@careershow')->name('show.career');
+Route::get('/apply-for-career/{id}', 'PagesController@careerform')->name('apply.career');
+Route::post('/apply-for-career/{id}', 'PagesController@submitmyform')->name('submit.career');
 
 
 // Admin Panel

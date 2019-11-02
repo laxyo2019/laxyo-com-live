@@ -12,7 +12,7 @@
 @section('body')	
 <section class="title_page bg_3">			
 <div class="container">				
-<div class="row">					
+<div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12">						
 <h2>Career</h2>						
 <nav id="breadcrumbs">							
@@ -25,8 +25,8 @@
 </div>			
 </div>		
 </section>		
-<!--End TITLE PAGE-->				
-		
+<!--End TITLE PAGE-->
+<section class="content sb_right">
 <div class="container">				
 <div class="row">					
 	<div class="col-lg-12 col-md-12 col-sm-12 effect-slide-bottom in">
@@ -34,15 +34,11 @@
 			<h1>Career <span>With Us</span></h1>
 		</div>
 	</div>
-</div>
-
-
 	<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
 	     <div class="card">
-       
         <div class="card-body">
           <div class="col-md-12 col-sm-12">
-            <a href="{{url('/career')}}" style="font-size: 20px;">back</a>
+            <a href="{{url('/careers')}}" style="font-size: 20px;">back</a>
             <hr>
           </div>
             <div class="col-md-12 col-sm-12">
@@ -61,13 +57,12 @@
                 <label>{{$car->job_location}}</label>
               </div>
             </div>
-           
             <div class="col-md-12 col-sm-12">
               <div class="col-md-4">
                <label>Experience</label> 
               </div>
               <div class="col-md-8">
-                <label>{{$car->exp}}</label>
+                <label>{{$car->min_exp}} to {{$car->max_exp}} yr</label>
               </div>
             </div>
             <div class="col-md-12 col-sm-12">
@@ -103,7 +98,7 @@
                <label>Candidate Need</label> 
               </div>
               <div class="col-md-8">
-                <label>{{$car->cand_count}}</label>
+                <label>{{$car->no_of_pos}}</label>
               </div>
             </div>
              <div class="col-md-12 col-sm-12">
@@ -115,7 +110,6 @@
               </div>
             </div>
         </div>
-      
        </div>   
 	</div>
 <!--Sidebar Widget-->
@@ -125,6 +119,7 @@
  
 <!--END ROW-->
 </div>
+</section>
 
 
 @endsection

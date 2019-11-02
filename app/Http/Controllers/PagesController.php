@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailSendContact;
 use App\Mail\SendMailCompany;
+use App\Models\Job;
+use App\Models\Career;
 
 class PagesController extends Controller
 {
@@ -16,7 +18,8 @@ class PagesController extends Controller
     return view('welcome');
   }
 
-  public function pages($page_title) {
+  public function pages($page_title) 
+  {
     if($page_title == 'careers') {
       $posts = DB::table('job_posts')->latest()->get();
       return view('pages.careers', compact('posts'));
@@ -25,46 +28,69 @@ class PagesController extends Controller
     return view('pages.'.$page_title);
   }
 
+  public function careerindex(){
+
+    $posts = Job::all();
+    return view('pages.careers', compact('posts'));
+  }
   
     public function submitmyform(Request $request)
     {
-        $pea = DB::table('site_variables')->get();
+      //return $request->all();
+        //$pea = DB::table('site_variables')->get();
          $this->validate($request,[
-               'name'    => 'required|max:255|regex:/^[a-zA-Z ]+$/',       
-               'email'   => 'required|email|max:255',     
-               "mobile"  =>"required|max:10|min:10|regex:/^([0-9\s\-\+\(\)]*)$/",
-                "captcha"=>'required|captcha',
-                'address'=>'required'
-               ],
-                [    
-                  "name.required" => "Name Should be filled"
-                ]
+            'name'    => 'required|max:255|regex:/^[a-zA-Z ]+$/',       
+            'email'   => 'required|email|max:255',
+            'about' => 'required',    
+            //'mobile'  => 'required|digits:10|regex:/^([0-9\s\-\+\(\)]*)$/',
+            'captcha' => 'required|captcha',
+            'address' => 'required'
+        ],
+          [    
+            'name.required' => 'Name should be filled'
+          ]
       );
-        $select_form_code = DB::table('form_mast')->get();
+        /*$select_form_code = DB::table('form_mast')->get();
         foreach ($select_form_code as $key => $value) {
            if ($value->site_code === '001' && $value->form_title === 'contact form' ) {
              $conform = $value->form_code;
          }
         }
-        $name=$request->input('name');
-        $email=$request->input('email');
-        $address=$request->input('address');
-        $mobile=$request->input('mobile');
-        $message=$request->input('message');
-        $data=array(
-                    "form_code"  => $conform,
+
+        $job_id = $request->input('job_id');
+        $name   = $request->input('name');
+        $email  = $request->input('email');
+        $address= $request->input('address');
+        $mobile = $request->input('mobileno');
+        $message= $request->input('message');
+        $data   = array(
+                    "job_id"    => $job_id,
                     "name"      => $name,
                     "email"     => $email,
                     "address"   => $address,
                     "mobile"    => $mobile,
                     "message"   => $message,
-                    "created_at" => date('Y-m-d H:i:s'),
-                    "updated_at" => date('Y-m-d H:i:s'),
-            );
-      
-       
+                    "created_at"=> date('Y-m-d H:i:s'),
+                    "updated_at"=> date('Y-m-d H:i:s'),
+            );*/
+            //return 321;
 
-      DB::table('form_contact')->insert($data);
+        $careers = new Career;
+        $careers->job_id    = $request->job_id;
+        $careers->name      = $request->name;
+        $careers->email     = $request->email;
+        $careers->address   = $request->address;
+        $careers->mobile    = $request->mobileno;
+        $careers->message   = $request->about;
+        $careers->file_path = $request->file_path;
+        $careers->created_at= date('Y-m-d H:i:s');
+        $careers->updated_at= date('Y-m-d H:i:s');
+        $careers->save();
+
+        //return 321;
+
+      /*DB::table('form_careers')->insert($data);
+      
       $mail = DB::table('site_variables')->select('*')->get();
 
         foreach($mail as $value){
@@ -74,7 +100,8 @@ class PagesController extends Controller
           
         }
       Mail::to($mail)->queue(new SendMailCompany($data));
-      return redirect()->back()->withInput()->with(['message'=>'Thank You For Contact Us We Will Contact You Soon...', 'pea'=> $pea]);
+      */
+      return back()->with(['success'=>'Thank You For Contacting Us We Will Contact You Soon...'/*, 'pea'=> $pea*/]);
 
     }
 
@@ -189,12 +216,10 @@ class PagesController extends Controller
 
 
     public function careerform($id){
-        $pea = DB::table('site_variables')->get();
+        //$pea = DB::table('site_variables')->get();
         $post = DB::table('job_posts')->find($id);
-        return view('pages.careerformapply', compact('post', 'pea'));
+        return view('pages.careerformapply', compact('post'));
     }
-
-
 
     public function laxyo_group_companies(){
         $pea = DB::table('site_vars')->get();
@@ -213,8 +238,8 @@ class PagesController extends Controller
     public function careershow($id){
 
         $car = DB::table('job_posts')->find($id);
-        $pea = DB::table('site_vars')->get();
-        return view('pages.careershow',['pea' => $pea ,'car'=> $car]);
+        //$pea = DB::table('site_vars')->get();
+        return view('pages.careershow',['car'=> $car]);
     }
 
 }

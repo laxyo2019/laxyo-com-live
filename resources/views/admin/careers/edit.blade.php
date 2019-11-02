@@ -32,7 +32,7 @@
 <main class="app-content">
 <div class="container">
     <div class="row pull-right"> 
-<a href="{{url('/admin-post')}}" class="btn btn-success">Back</a>
+<a href="{{route('admin.jobs.index')}}" class="btn btn-success">Back</a>
 </div>
 <div class="row justify-content-center">
   <div class="col-md-12">
@@ -40,20 +40,20 @@
 <div class="card uper">
   
   <div class="card-header bg-dark" style="color: white">
-    <h1>Page Update here</h1>
+    <h1>Update job posting</h1>
   </div>
   <div class="card-body">
    
-      <form method="post" action="{{action('PostController@update', $post->id)}}">
+<form method="post" action="{{route('admin.jobs.update', ['id' => $post->id])}} ">
          <div class="form-group">
-              {{@csrf_field()}}          
+              {{@csrf_field()}}
               <input type="hidden" name="_method" value="PATCH">
-              <div class="row">
+              {{-- <div class="row">
                 <div class="col-md-12">
                    <label for="postname">Active Form*</label>
                    <input type="text" name="active" id="active" class="form-control" value="{{$post->active}}">
                 </div> 
-              </div>
+              </div> --}}
               <div class="row">
                 <div class="col-md-6">
                   <label for="postname">Job Title*</label>
@@ -64,47 +64,39 @@
                   <input type="text" name="location" id="location" class="form-control" value="{{$post->job_location}}">
                 </div>
               </div>
-              
               <div class="row">
                 <div class="col-md-6">
-                  <label for="vacancy">Experience*</label>
-                  <select name="experience" id="experience" class="form-control" value="{{$post->exp}}">
-                    <option value="fresher">fresher</option>
-                    <option value="1 - 15 yrs(Experience)">1 - 15 yrs(Experience)</option>
-                    <option value="15+ yrs">15+ yrs</option>
-                  </select>
+                  <label for="min_exp">Min Experience*</label>
+                  <input type="text" name="min_exp" id="min_exp" class="form-control" value="{{$post->min_exp}}">
                 </div>
                 <div class="col-md-6">
-                     <label for="">Resume Necessary*</label>
-                     <select name="resume" id="resume" class="form-control" value="{{$post->resume_req}}">
-                      <option value="">Select</option>
-                      <option value="1">Yes</option>
-                      <option value="0">No</option>
-                    </select>
+                  <label for="max_exp">Max Experience*</label>
+                  <input type="text" name="location" id="location" class="form-control" value="{{$post->max_exp}}">
                 </div>
-              </div>
-
-              
+              </div>              
               <div class="row">
-                
                 <div class="col-md-6">
-                  
                     <label for="">Salary From:</label>
-          
                      <input type="text" name="salaryfrom" id="salaryfrom" class="form-control" value="{{$post->sal_min}}">
-            
                 </div>
-                 
                 <div class="col-md-6">
-                
                     <label for="" >Salray To:</label>
                   
                      <input type="text" name="salaryto" id="salaryto" class="form-control" value="{{$post->sal_max}}">
                 </div>
-            </div>
-              <div class="row">
+              </div>
+                <div class="row">
+                  <div class="col-md-6">
+                     <label for="opendate">Opening Date*</label>
+                     <input type="text" name="opendate" id="opendate" class="form-control" value="{{$post->open_dt}}" readonly="true">
+                       @if(session()->get('warning'))
+                       <span class="text-danger">
+                          {{ session()->get('warning') }}  
+                        </span>
+                      @endif
+                </div>
                 <div class="col-md-6">
-                   <label for="startdate">Closing Date*</label>
+                   <label for="closingdate">Closing Date*</label>
                    <input type="text" name="closingdate" id="closingdate" class="form-control" value="{{$post->close_dt}}" readonly="true">
                      @if(session()->get('warning'))
                      <span class="text-danger">
@@ -114,10 +106,17 @@
                 </div>
                 <div class="col-md-6">
                   <label for="startdate">Candidate Count*</label>
-                  <input type="text" name="candidatecount" id="candidatecount" class="form-control" value="{{$post->cand_count}}">
+                  <input type="text" name="candidatecount" id="candidatecount" class="form-control" value="{{$post->no_of_pos}}">
+                </div>
+                <div class="col-md-6">
+                     <label for="">Resume Necessary*</label>
+                     <select name="resume" id="resume" class="form-control" value="{{$post->resume_req}}">
+                      <option value="">Select</option>
+                      <option value="1" {{old('resume', $post->resume_req == 1 ? 'selected' : '')}}>Yes</option>
+                      <option value="0" {{old('resume', $post->resume_req == 0 ? 'selected' : '')}}>No</option>
+                    </select>
                 </div>
               </div>
-              
              <div class="row">
                <div class="col-md-12">
                  <label for="">Description*</label>

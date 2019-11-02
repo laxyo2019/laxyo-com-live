@@ -12,9 +12,9 @@
             <a href="{{url('/vendor-registration')}}" class="pull-right vendor">
               <i class="fa fa-user"></i> &nbsp;Vendor Registration
             </a> 
-            {{-- <a href="{{url('/career')}}" class="vendor">
+             <a href="{{url('careers')}}" class="vendor">
               <i class="fa fa-plus" aria-hidden="true"></i> &nbsp;Career
-            </a> --}}
+            </a>
             
           </div>
           <div class="col-lg-2 col-md-2 col-sm-12">
@@ -49,9 +49,7 @@
                   <li class="active">
                   <a href="{{url('/')}}">Home</a>
                   </li>
-                  
                   <li><a href="{{url('/about')}}">About</a></li>
-
                   <li><a href="{{url('laxyo-group-companies')}}">Laxyo Group Companies<span class="marker"><i class="fa fa-angle-down"></i></span></a>
                     <div class="megamenu rew">
                       <div class="row">
@@ -71,23 +69,29 @@
                             <div class="tpl2">
                                 <ul class="popular_posts_list">
 
-                                  <li> <span> <a target="_blank" href="http://www.laxyofinance.com/" class="post-img"> <img src="images/laxyo-finance-limited.jpg" alt="laxyo finance limited"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="http://www.laxyofinance.com/" class="post-img"> 
+
+<img src="{{asset('images/laxyo-finance-limited.jpg')}}" alt="laxyo finance limited"> <span class="overlay"></span> </a> </span>
+
                                     <p class="wrap"> <a class="rp_title" target="_blank" href="http://www.laxyofinance.com/">Laxyo Finance Limited</a> <a target="_blank" href="http://www.laxyofinance.com/"><small class="rp_date"><i>www.laxyofinance.com</i></small></a> </p>
                                   </li>
 
-                                  <li> <span> <a target="_blank" href="http://www.laxyosolutionsoft.com/" class="post-img"> <img src="images/Laxyo-SolutionSoft.jpg" alt="Laxyo SolutionSoft"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="http://www.laxyosolutionsoft.com/" class="post-img"> 
+                                  <img src="{{asset('images/Laxyo-SolutionSoft.jpg')}}" alt="Laxyo SolutionSoft"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.laxyosolutionsoft.com/" class="rp_title">Laxyo Solution Soft Pvt. Ltd.</a> <a href="http://www.laxyosolutionsoft.com/" target="_blank"><small class="rp_date"><i>www.laxyosolutionsoft.com</i></small></a> </p>
                                   </li>
                                   
-                                  <li> <span> <a target="_blank" href="http://www.apnagps.com/" class="post-img"> <img src="images/apnagps.jpg" alt="apnagps"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="http://www.apnagps.com/" class="post-img"> 
+<img src="{{asset('images/apnagps.jpg')}}" alt="apnagps"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.apnagps.com/" class="rp_title">APNA GPS - The Tracker</a> <a href="http://www.apnagps.com/" target="_blank"><small class="rp_date"><i>www.apnagps.com</i></small></a> </p>
                                   </li>
                                   
-                                  <li> <span> <a target="_blank" href="http://www.advocatemail.com/" class="post-img"> <img src="images/advocatemail.jpg" alt="advocatemail"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="http://www.advocatemail.com/" class="post-img"> <img src="{{asset('images/advocatemail.jpg')}}" alt="advocatemail"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.advocatemail.com/" class="rp_title">Advocate Mail</a> <a href="http://www.advocatemail.com/" target="_blank"><small class="rp_date"><i>www.advocatemail.com</i></small></a> </p>
                                   </li>
 
-                                  <li> <span> <a target="_blank" href="http://www.lapinkcafe.com/" class="post-img"> <img src="images/lapinkcafe-icon.jpg" alt="lapinkcafe"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="http://www.lapinkcafe.com/" class="post-img"> 
+<img src="{{asset('images/lapinkcafe-icon.jpg')}}" alt="lapinkcafe"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.lapinkcafe.com/" class="rp_title">La' Pink Cafe</a> <a href="http://www.lapinkcafe.com/" target="_blank"><small class="rp_date"><i>www.lapinkcafe.com</i></small></a> </p>
                                   </li>
                                 </ul>
@@ -96,19 +100,20 @@
                           <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="tpl2">
                               <ul class="popular_posts_list">
-                              	  <li> <span> <a target="_blank" href="http://www.yolaxinfra.com/" class="post-img"> <img src="images/yolax.jpg" alt="yolax"> <span class="overlay"></span> </a> </span>
+                              	  <li> <span> <a target="_blank" href="http://www.yolaxinfra.com/" class="post-img"> 
+<img src="{{asset('images/yolax.jpg')}}" alt="yolax"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.yolaxinfra.com/" class="rp_title">Yolax Infranergy Pvt. Ltd.</a> <a href="http://www.yolaxinfra.com/" target="_blank"><small class="rp_date"><i>www.yolaxinfra.com</i></small></a> </p>
                                   </li>
-                                  <li> <span> <a target="_blank" href="http://lakshyainternationalschool.org/" class="post-img"> <img src="images/lakshya-international-school.jpg" alt="lakshya international school"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="http://lakshyainternationalschool.org/" class="post-img"> <img src="{{asset('images/lakshya-international-school.jpg')}}" alt="lakshya international school"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://lakshyainternationalschool.org/" class="rp_title">Lakshya International School</a> <a href="http://lakshyainternationalschool.org/" target="_blank"><small class="rp_date"><i>www.lakshyainternationalschool.org</i></small></a> </p>
                                   </li>    
-                                  <li> <span> <a target="_blank" href="http://www.discountbrandfactory.com/" class="post-img"> <img src="images/discount-brand-factory.jpg" alt="discount brand factory"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="http://www.discountbrandfactory.com/" class="post-img"> <img src="{{asset('images/discount-brand-factory.jpg')}}" alt="discount brand factory"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.discountbrandfactory.com/" class="rp_title">Discount Brand Factory</a> <a href="http://www.discountbrandfactory.com/" target="_blank"><small class="rp_date"><i>www.discountbrandfactory.com</i></small></a> </p>
                                   </li>                       
-                                  <li> <span> <a target="_blank" href="http://www.maagayatrihospital.org/" class="post-img"> <img src="images/maa-gayatri-hospital.jpg" alt="maa gayatri hospital"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="http://www.maagayatrihospital.org/" class="post-img"> <img src="{{asset('images/maa-gayatri-hospital.jpg')}}" alt="maa gayatri hospital"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.maagayatrihospital.org/" class="rp_title">Maa Gayatri Hospital</a> <a href="http://www.maagayatrihospital.org/" target="_blank"><small class="rp_date"><i>www.maagayatrihospital.org</i></small> </a></p>
                                   </li>
-                                  <li> <span> <a target="_blank" href="#" class="post-img"> <img src="images/apnasolar-icon.jpg" alt="apnasolar"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="#" class="post-img"> <img src="{{assert(assertion)                           ('images/apnasolar-icon.jpg')}}" alt="apnasolar"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.apnasolar.in/" class="rp_title">Apna Solar</a> <a href="http://www.apnasolar.in/" target="_blank"><small class="rp_date"><i>www.apnasolar.in</i></small></a> </p>
                                   </li>
                                 </ul>
@@ -125,15 +130,14 @@
                       <div class="row">
                         <div class="col-md-4 col-sm-4 col-xs-12">
                           <div class="title_wmm">
-                            <img src="images/laxyo-services.jpg" alt="laxyo services">
+       {{--  <img src="images/laxyo-services.jpg" alt="laxyo services"> --}}
+        <img src="{{ asset('images/laxyo-services.jpg')}}" alt="laxyo group companies">
                           </div>
                          </div>
-
                         <div class="col-md-8 col-sm-8 col-xs-12">
                           <div class="title_wmm">
                             <h3>Services We Offered</h3>
                           </div>
-
                           <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="tpl2">
@@ -149,9 +153,11 @@
                                 <li>
                                   <span><a href="{{url('/renewable-energy-system')}}"><i class="fa fa-angle-right"></i> &nbsp;Renewable Energy System</a></span>
                                 </li>
-
                                 <li>
                                   <span><a href="{{url('/amphibious-excavator')}}"><i class="fa fa-angle-right"></i> &nbsp;Amphibious Excavator</a></span>
+                                </li>
+                                <li>
+                                  <span><a href="{{url('/pway-signaling-and-telecom-material')}}"><i class="fa fa-angle-right"></i> &nbsp;P Way Material</a></span>
                                 </li>
                                  
                               </ul>

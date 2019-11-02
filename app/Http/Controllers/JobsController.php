@@ -64,7 +64,7 @@ class JobsController extends Controller
 
 			DB::table('job_posts')->insert($data);
 
-			return redirect('/admin/jobs')->with('success', 'Data Inserted Successfully');
+			return redirect('/admin/jobs')->with('success', 'Posted successfully');
 		}
 		else
 		{
@@ -74,9 +74,15 @@ class JobsController extends Controller
 	}
 
 	public function edit($id){
-		$post = DB::table('job_posts')->find($id);
-		return view('admin.laxyo.postedit',compact('post'));	
+
+		//$post = DB::table('job_posts')->find($id);
+		$post = Job::findOrFail($id);
+
+		//return $jobs;
+
+		return view('admin.careers.edit',compact('post'));	
 	}
+
 	public function update(Request $request, $id){
 
 		$this->validate($request, [

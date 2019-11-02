@@ -65,7 +65,6 @@
 		</div>
 		<div class="row">
 			@foreach($posts as $post)
-			@if($post->active == 1)
 			<div class="col-md-4">
 				<div class="card">
 					<div class="card-title" style="text-align: center;">
@@ -75,22 +74,20 @@
 					<div class="card-body">
 						<p><b>Job Title:</b> {{$post->job_title}} </p>
 						<p><b>Location:</b> {{$post->job_location}}</p>
-						<p><b>Experience:</b> {{$post->exp}}</p>
-						
+						<p><b>Experience:</b> <span>{{$post->min_exp}} </span>to <span>{{$post->max_exp}}</span></p>
 						<p><b>Salary :</b> <span>{{$post->sal_min}}</span> To <span>{{$post->sal_max}}</span></p>
-						<p><b>Candidate Count:</b> {{$post->cand_count}}</p>
+						<p><b>Candidate Count:</b> {{$post->no_of_post}}</p>
 					</div>
 					<div class="card-footer">
-						<a class="showdetail btn btn-primary" href="/career-show/{{$post->id}}">
+						<a class="showdetail btn btn-primary" href={{route('show.career', ['id' => $post->id])}}>
 						  Show Details
 						</a>&nbsp;
-						<a class="apply btn btn-success" href="/career-form-apply/{{$post->id}}">
+						<a class="apply btn btn-success" href={{route('apply.career', ['id' => $post->id])}}>
 						  Apply Now
 						</a>
 					</div>
 				</div>
 			</div>
-			@endif
 			@endforeach
 		</div>
         
@@ -111,13 +108,10 @@
         <h4 class="modal-title">Apply Here</h4>
         <button type="button" class="" data-dismiss="modal">&times;</button>
       </div>
-      <form id="careerform" action="{{ action('CareerController@submit') }}" method="post" class="form" enctype="multipart/form-data">
+      <form id="careerform" action="{{-- {{ action('CareerController@submit') }} --}}" method="post" class="form" enctype="multipart/form-data">
       	@csrf
       <!-- Modal body -->
       <div class="modal-body">
-               
-      
-
       <!-- Modal footer -->
       <div class="modal-footer">
       	

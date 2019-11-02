@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Dredging Contractors, Dredger Rental Equipment Companies and Dredger Owners in India')
+@section('title','Dredging Contractor, Dredging Equipment Rental Companies, Dredging and Reclamation, Dredger Service Providers in India')
 @section('meta')  
   <meta name="description" content= "Laxyo Group of dredging contractor provides dredging equipment rental, dredger owners in india, Dredger service providers, Dredging and Reclamation, dredger on rent, list of dredging companies in india, Dredging services in India, small dredger for rent, rental dredging equipment, dredging equipment on rent, CSD dredger on lease, "/>
 
