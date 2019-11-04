@@ -104,7 +104,8 @@
 <img src="{{asset('images/yolax.jpg')}}" alt="yolax"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.yolaxinfra.com/" class="rp_title">Yolax Infranergy Pvt. Ltd.</a> <a href="http://www.yolaxinfra.com/" target="_blank"><small class="rp_date"><i>www.yolaxinfra.com</i></small></a> </p>
                                   </li>
-                                  <li> <span> <a target="_blank" href="http://lakshyainternationalschool.org/" class="post-img"> <img src="{{asset('images/lakshya-international-school.jpg')}}" alt="lakshya international school"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="http://lakshyainternationalschool.org/" class="post-img"> 
+<img src="{{ asset('images/lakshya-international-school.jpg') }}" alt="lakshya international school"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://lakshyainternationalschool.org/" class="rp_title">Lakshya International School</a> <a href="http://lakshyainternationalschool.org/" target="_blank"><small class="rp_date"><i>www.lakshyainternationalschool.org</i></small></a> </p>
                                   </li>    
                                   <li> <span> <a target="_blank" href="http://www.discountbrandfactory.com/" class="post-img"> <img src="{{asset('images/discount-brand-factory.jpg')}}" alt="discount brand factory"> <span class="overlay"></span> </a> </span>
@@ -113,7 +114,8 @@
                                   <li> <span> <a target="_blank" href="http://www.maagayatrihospital.org/" class="post-img"> <img src="{{asset('images/maa-gayatri-hospital.jpg')}}" alt="maa gayatri hospital"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.maagayatrihospital.org/" class="rp_title">Maa Gayatri Hospital</a> <a href="http://www.maagayatrihospital.org/" target="_blank"><small class="rp_date"><i>www.maagayatrihospital.org</i></small> </a></p>
                                   </li>
-                                  <li> <span> <a target="_blank" href="#" class="post-img"> <img src="{{assert(assertion)                           ('images/apnasolar-icon.jpg')}}" alt="apnasolar"> <span class="overlay"></span> </a> </span>
+                                  <li> <span> <a target="_blank" href="#" class="post-img"> 
+            <img src="{{asset('images/apnasolar-icon.jpg')}}" alt="apnasolar"> <span class="overlay"></span> </a> </span>
                                     <p class="wrap"> <a target="_blank" href="http://www.apnasolar.in/" class="rp_title">Apna Solar</a> <a href="http://www.apnasolar.in/" target="_blank"><small class="rp_date"><i>www.apnasolar.in</i></small></a> </p>
                                   </li>
                                 </ul>

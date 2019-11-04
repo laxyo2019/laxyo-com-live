@@ -37,12 +37,17 @@ Route::view('/contact', 'pages.contact');
 Route::view('/career', 'pages.careers');
 Route::get('vendor-registration', 'VendorsController@create');
 Route::post('vendor-registration', 'VendorsController@store');
-//For job apply
 
-Route::get('/careers', 'PagesController@careerindex');
+//For job apply(Career with User)
+
+Route::resource('careers', 'CareerController');
+
+/*Route::get('/careers', 'PagesController@careerindex');
 Route::get('/career-detail/{id}', 'PagesController@careershow')->name('show.career');
-Route::get('/apply-for-career/{id}', 'PagesController@careerform')->name('apply.career');
-Route::post('/apply-for-career/{id}', 'PagesController@submitmyform')->name('submit.career');
+Route::post('/apply-for-career/{id}', 'PagesController@submitmyform')->name('submit.career');*/
+
+Route::get('/apply-for-career/{id}', 'CareerController@create')->name('apply.career');
+
 
 
 // Admin Panel

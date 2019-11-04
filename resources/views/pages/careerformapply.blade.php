@@ -54,6 +54,15 @@
             <hr>
       </div>
       <div class="col">
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
         @if(session()->get('success'))
           <div class="alert alert-success">
             {{ session()->get('success') }}  
@@ -62,7 +71,7 @@
       </div>
 			 <div class="col-md-12">
 		
-			 <form id="careerform" action="{{route('submit.career', ['id' => $post->id])}} {{-- {{ action('CareerController@submit') }} --}}" method="post" class="form" enctype="multipart/form-data">
+			 <form id="careerform" action="{{route('careers.store', ['id' => $post->id])}} {{-- {{ action('CareerController@submit') }} --}}" method="post" class="form" enctype="multipart/form-data">
       	     <div class="card form-group">
       	     @csrf
       	     <div class="card-header bg-primary">
@@ -92,7 +101,7 @@
 								      @endif
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" id="careeraddress" name="address" placeholder="Your Address" onFocus="geolocate()" type="text" value="{{old('address')}}">
+                                <input class="form-control" id="careeraddress" name="address" placeholder="Your Address" onFocus="geolocate()" type="text" value="{{old('address')}}" >
                             </div>
                         </div>
                         
@@ -102,8 +111,8 @@
                          @if($post->resume_req == '1')
                               <div class="col-md-12">
 			                        <div class="form-group">
-			                            <label for="exampleInputFile">Attached Resume Here</label>
-			                            <input id="file" name="file" type="file">
+			                            <label for="exampleInputFile">Upload Resume</label>
+			                            <input id="file" name="file_path" type="file">
 			                            <p class="help-block">Attach .doc, .pdf files only (Min of 3MB)</p>
 			                        </div>
 			                        </div>

@@ -79,7 +79,7 @@
 						<p><b>Candidate Count:</b> {{$post->no_of_post}}</p>
 					</div>
 					<div class="card-footer">
-						<a class="showdetail btn btn-primary" href={{route('show.career', ['id' => $post->id])}}>
+						<a class="showdetail btn btn-primary" href={{route('careers.show', ['id' => $post->id])}}>
 						  Show Details
 						</a>&nbsp;
 						<a class="apply btn btn-success" href={{route('apply.career', ['id' => $post->id])}}>

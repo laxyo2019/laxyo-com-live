@@ -68,7 +68,7 @@
 						<a href="#" class="btn text-danger " onclick="event.preventDefault(); if(confirm('Are you sure?')){
 		                  document.getElementById('delete-form-{{ $vender->id }}').submit();}"><span class="fa fa-trash fa-lg"></span></a>
 
-		                  <form id="delete-form-{{ $vender->id }}" action="{{ route('venderdel', ['id' => $vender->id ]) }}" method="POST" style="display: none;">
+		                  <form id="delete-form-{{ $vender->id }}" action="{{-- {{ route('venderdel', ['id' => $vender->id ]) }} --}}" method="POST" style="display: none;">
 		                      @csrf
 		                      @method('delete')
 		                  </form>
