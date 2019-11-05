@@ -28,6 +28,7 @@ class CreateJobPostsTables extends Migration
             $table->date('close_dt');
             $table->decimal('no_of_pos', 4, 1);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

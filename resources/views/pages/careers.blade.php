@@ -76,7 +76,7 @@
 						<p><b>Location:</b> {{$post->job_location}}</p>
 						<p><b>Experience:</b> <span>{{$post->min_exp}} </span>to <span>{{$post->max_exp}}</span></p>
 						<p><b>Salary :</b> <span>{{$post->sal_min}}</span> To <span>{{$post->sal_max}}</span></p>
-						<p><b>Candidate Count:</b> {{$post->no_of_post}}</p>
+						<p><b>Candidate Count:</b> {{$post->no_of_pos}}</p>
 					</div>
 					<div class="card-footer">
 						<a class="showdetail btn btn-primary" href={{route('careers.show', ['id' => $post->id])}}>

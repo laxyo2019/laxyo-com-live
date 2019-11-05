@@ -86,7 +86,7 @@
                 </div>
               </div>
                 <div class="row">
-                  <div class="col-md-6">
+                 {{--  <div class="col-md-6">
                      <label for="opendate">Opening Date*</label>
                      <input type="text" name="opendate" id="opendate" class="form-control" value="{{$post->open_dt}}" readonly="true">
                        @if(session()->get('warning'))
@@ -103,7 +103,7 @@
                         {{ session()->get('warning') }}  
                       </span>
                     @endif
-                </div>
+                </div> --}}
                 <div class="col-md-6">
                   <label for="startdate">Candidate Count*</label>
                   <input type="text" name="candidatecount" id="candidatecount" class="form-control" value="{{$post->no_of_pos}}">

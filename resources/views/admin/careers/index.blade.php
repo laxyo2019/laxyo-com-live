@@ -33,16 +33,16 @@
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
-    </div><br />
+    </div><br/>
   @endif
   @if ($errors->any())
-            <div class="alert alert-danger">
-              <ul>
-                  @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                  @endforeach
-              </ul>
-            </div><br />
+          <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+          </div><br />
           @endif
   <table class="table table-bordered table-responsive bg-light text-center" id="posttable" style="caption-side: top">
     <thead class="bg-dark" style="color: White;text-align: center;width: 100%;">
@@ -54,7 +54,7 @@
           {{-- <td style="width: 20%">Description</td> --}}
           <td style="width: 5%">Resume Necessary</td>
           <td style="width: 20%" colspan="2">Salary Range</td>
-          <td style="width: 20%" colspan="2">Duration</td>
+          {{-- <td style="width: 20%" colspan="2">Duration</td> --}}
           <td style="width: 5%">Candidate Count</td>
           {{-- <td>Active</td> --}}
           <td style="width: 10%">Action</td>
@@ -69,8 +69,8 @@
           <td style="width: 5%"></td>
           <td style="width: 10%">From</td>
           <td style="width: 10%">To</td>
-          <td style="width: 10%">From</td>
-          <td style="width: 10%">To</td>
+         {{--  <td style="width: 10%">From</td>
+          <td style="width: 10%">To</td> --}}
           <td style="width: 5%"></td>
           {{-- <td style="width: 10%"></td> --}}
           <td></td> 
@@ -88,23 +88,22 @@
              <td>{{$posts->resume_req == 1 ? 'Yes' : 'No'}}</td>
              <td>{{$posts->sal_min}}</td>
              <td>{{$posts->sal_max}}</td>
-             <td>{{$posts->open_dt}}</td>
-             <td>{{$posts->close_dt}}</td>
+             {{-- <td>{{$posts->open_dt}}</td>
+             <td>{{$posts->close_dt}}</td> --}}
              <td>{{$posts->no_of_pos}}</td>
-             {{-- @if($posts->active == 1)
-                <td>True</td>
-             @else
-                 <td>False</td>
-             @endif  --}}      
-             <td>
-               <a href="{{route('admin.jobs.edit', ['id' => $posts->id])}}" class="text-primary"><span class="fa fa-edit fa-lg"></span></a>
-                <a href="#" class="text-danger" onclick="event.preventDefault(); if(confirm('Are you sure?')){
-                  document.getElementById('delete-form-{{ $posts->id }}').submit();}"><span class="fa fa-trash fa-lg"></span></a>
-
-                  <form id="delete-form-{{ $posts->id }}" action="{{ route('admin.jobs.destroy', $posts->id) }}" method="POST" style="display: none;">
-                      @csrf
-                      @method('delete')
-                  </form>
+             <td class='d-flex' style="border-bottom:none">
+              <span>
+              <button type="button" class="btn btn-primary btn-sm"><a href="{{route('replies', ['id' => $posts->id])}}"><i class="fa fa-comment text-white" aria-hidden="true"></i></a></button>
+            </span>
+            <span>
+               <button type="button" class="btn btn-success btn-sm ml-1"><a href="{{route('admin.jobs.edit', ['id' => $posts->id])}}" class="text-primary"><span class="fa fa-edit text-white"></span></a></button>
+               </span>
+               <span>
+                <form action="{{route('job.destroy', [$posts->id])}}" method="GET" id="delform_{{$posts->id}}">
+                  <a href="javascript:$('#delform_{{$posts->id}}').submit();" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash text-white" style="font-size: 12px;"></i></a>
+                </form>
+              </span>
+               
              </td>
             </tr>
          @endforeach

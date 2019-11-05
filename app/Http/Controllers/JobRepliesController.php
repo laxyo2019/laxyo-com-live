@@ -2,11 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Career;
+use Illuminate\Support\Facades\Storage;
+
 class JobRepliesController extends Controller
 {
   public function __construct()
   {
     $this->middleware('auth');
+  }
+
+  public function index($id){
+
+    //return 654;
+
+    $replies = Career::where('job_id', $id)->get();
+
+    return view('admin.careers.jobreplies.index', compact('replies'));
+      
+  }
+
+  public function downloadresume($id){
+
+    $resume = Career::find($id)->file_path;
+
+     return Storage::download($resume);
+    return $resume;
   }
 
   public function submit(Request $request){
@@ -56,6 +77,7 @@ class JobRepliesController extends Controller
       "updated_at" => date('Y-m-d H:i:s'),
     );
     DB::table('form_career')->insert($data);
+
   }else{
    $data = array(
     'form_code' =>$cform,
@@ -84,10 +106,6 @@ class JobRepliesController extends Controller
 Mail::to($mail)->queue(new SendMailable($data));
 Mail::to($email)->queue(new MailSendContact($data));
 return redirect('/career')->with(['success'=>'Data Inserted Successfully', 'pea' => $pea]);
-}
-
-public function index(){
-    	//
 }
 
 // feedback insertion function

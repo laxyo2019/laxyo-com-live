@@ -41,12 +41,16 @@ Route::post('vendor-registration', 'VendorsController@store');
 //For job apply(Career with User)
 
 Route::resource('careers', 'CareerController');
-
-/*Route::get('/careers', 'PagesController@careerindex');
-Route::get('/career-detail/{id}', 'PagesController@careershow')->name('show.career');
-Route::post('/apply-for-career/{id}', 'PagesController@submitmyform')->name('submit.career');*/
-
 Route::get('/apply-for-career/{id}', 'CareerController@create')->name('apply.career');
+
+//For Job replies
+
+Route::get('job-replies/{id}', 'JobRepliesController@index')->name('replies');
+
+//download resume
+Route::get('admin/career/download/{id}', 'JobRepliesController@downloadresume')->name('download.document');
+
+Route::get('admin/job/{id}', 'JobsController@destroy')->name('job.destroy');
 
 
 

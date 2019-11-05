@@ -8,23 +8,22 @@ use App\Models\Career;
 
 class CareerController extends Controller
 {
-    //
-
     public function index(){
 
-    	$posts = Job::all();
+    	$posts = Job::where('deleted_at', null)->get();
+
     	return view('pages.careers', compact('posts'));
     }
 
     public function show($id){
 
-        $car = Job::find($id);
-        return view('pages.careershow',['car'=> $car]);
+        $post = Job::find($id);
+        return view('pages.careershow',['post'=> $post]);
     }
 
     public function create($id){
 
-    	$post = Job::find($id);
+    	$post = Job::findOrFail($id);
 
     	return view('pages.careerformapply', compact('post'));
     }
@@ -37,14 +36,22 @@ class CareerController extends Controller
             'mobileno'=> 'required|regex:/^([0-9\s\-\+\(\)]*)$/',
             'address' => 'required',
             'captcha' => 'required|captcha',
-            'about'   => 'required',
-            
-        	],
+            'about'   => 'required'],
           	[    
             	'name.required' => 'Name should be filled',
-
           	]
       	);
+
+        if($request->hasFile('file_path')){
+
+          $dir      = 'careers/'.date("Y").'/'.date("F");
+          $file_ext = $request->file('file_path')->getClientOriginalExtension();
+          $filename = 'document_'.time().'.'.$file_ext;
+          $path     = $request->file('file_path')->storeAs($dir, $filename);
+
+        }else{
+          $path = null;
+        }
 
       	$careers = new Career;
         $careers->job_id    = $request->job_id;
@@ -53,7 +60,7 @@ class CareerController extends Controller
         $careers->address   = $request->address;
         $careers->mobile    = $request->mobileno;
         $careers->message   = $request->about;
-        $careers->file_path = $request->file('file_path');
+        $careers->file_path = $path;
         $careers->created_at= date('Y-m-d H:i:s');
         $careers->updated_at= date('Y-m-d H:i:s');
         $careers->save();

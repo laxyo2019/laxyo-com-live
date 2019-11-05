@@ -113,8 +113,10 @@ class JobsController extends Controller
 	}
 
 	public function destroy($id){
-		$post = DB::table('job_posts')->delete($id);
-		return redirect('/admin-post')->with('success', 'Data Deleted Successfully');
+
+		$row = Job::find($id);
+		$row->delete();
+		return back()->with('success', 'Data Deleted Successfully');
 	}
 
 	public function show($id){

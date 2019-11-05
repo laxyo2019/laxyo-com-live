@@ -46,7 +46,7 @@
                <label>Job Title</label> 
               </div>
               <div class="col-md-8">
-                <label>{{$car->job_title}}</label>
+                <label>{{$post->job_title}}</label>
               </div>
             </div>
             <div class="col-md-12 col-sm-12">
@@ -54,7 +54,7 @@
                <label>Job Location</label> 
               </div>
               <div class="col-md-8">
-                <label>{{$car->job_location}}</label>
+                <label>{{$post->job_location}}</label>
               </div>
             </div>
             <div class="col-md-12 col-sm-12">
@@ -62,7 +62,7 @@
                <label>Experience</label> 
               </div>
               <div class="col-md-8">
-                <label>{{$car->min_exp}} to {{$car->max_exp}} yr</label>
+                <label>{{$post->min_exp}} to {{$post->max_exp}} yr</label>
               </div>
             </div>
             <div class="col-md-12 col-sm-12">
@@ -70,7 +70,7 @@
                <label>Resume</label> 
               </div>
               <div class="col-md-8">
-                @if($car->resume_req == '1')
+                @if($post->resume_req == '1')
                 <label>Necessary</label>
                 @else
                 <label>No Necessary</label>
@@ -82,7 +82,7 @@
                <label>Salary</label> 
               </div>
               <div class="col-md-8">
-                <label>{{$car->sal_min}} To {{$car->sal_max}}</label> 
+                <label>{{$post->sal_min}} To {{$post->sal_max}}</label> 
               </div>
             </div>
             <div class="col-md-12 col-sm-12">
@@ -90,7 +90,7 @@
                <label>Closing Date</label> 
               </div>
               <div class="col-md-8">
-                <label class="text-danger">{{$car->close_dt}}</label>
+                <label class="text-danger">{{$post->close_dt}}</label>
               </div>
             </div>
             <div class="col-md-12 col-sm-12">
@@ -98,7 +98,7 @@
                <label>Candidate Need</label> 
               </div>
               <div class="col-md-8">
-                <label>{{$car->no_of_pos}}</label>
+                <label>{{$post->no_of_pos}}</label>
               </div>
             </div>
              <div class="col-md-12 col-sm-12">
@@ -106,7 +106,7 @@
                <label>Description</label> 
               </div>
               <div class="col-md-8">
-                <label><?php echo $car->job_desc ?></label>
+                <label><?php echo $post->job_desc ?></label>
               </div>
             </div>
         </div>
