@@ -63,24 +63,7 @@
                 </div>
             </div>
               <div class="row">
-                <div class="col-md-6">
-                   <label for="opendate">Opening Date*</label>
-                   <input type="text" name="opendate" id="opendate" class="form-control" value="{{old('opendate')}}" readonly="true">
-                     @if(session()->get('warning'))
-                     <span class="text-danger">
-                        {{ session()->get('warning') }}  
-                      </span>
-                    @endif
-                </div>
-                <div class="col-md-6">
-                   <label for="closingdate">Closing Date*</label>
-                   <input type="text" name="closingdate" id="closingdate" class="form-control" value="{{old('closingdate')}}" readonly="true">
-                     @if(session()->get('warning'))
-                     <span class="text-danger">
-                        {{ session()->get('warning') }}  
-                      </span>
-                    @endif
-                </div>
+                
                 <div class="col-md-6">
                   <label for="candidatecount">Candidate Count*</label>
                   <input type="text" name="candidatecount" id="candidatecount" class="form-control" value="{{old('candidatecount')}}">

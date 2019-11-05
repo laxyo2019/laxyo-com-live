@@ -34,8 +34,6 @@ class JobsController extends Controller
 			'description'	=> 'required',
 			'salaryfrom'	=> 'required',
 			'salaryto'		=> 'required',
-			'opendate'		=> 'required',
-			'closingdate'	=> 'required',
 			'min_exp'		=> 'required',
 			'max_exp'		=> 'required',
 			'candidatecount'=> 'required',
@@ -51,25 +49,26 @@ class JobsController extends Controller
 		$data['resume_req']	  = $request->resume;
 		$data['sal_min']	  = $request->salaryfrom;
 		$data['sal_max']	  = $request->salaryto;
-		$data['open_dt']	  = date('Y-m-d', strtotime($request->opendate));
-		$data['close_dt']	  = date('Y-m-d', strtotime($request->closingdate));
 		$data['no_of_pos']	  = $request->candidatecount; 
 		$data['created_at']	  = date('Y-m-d H:i:s');
 		
-		
+		/*
 		$dates = strtotime($request->closingdate);
-		$cdate = strtotime(date('d-m-Y'));
+		$cdate = strtotime(date('d-m-Y'));*/
+
+
+		DB::table('job_posts')->insert($data);
+
+		return redirect('/admin/jobs')->with('success', 'Posted successfully');
 		
-		if (($dates >= $cdate)) {
+		/*if (($dates >= $cdate)) {
 
-			DB::table('job_posts')->insert($data);
-
-			return redirect('/admin/jobs')->with('success', 'Posted successfully');
+			
 		}
 		else
 		{
 			return redirect()->route('admin-post.create')->with('warning', 'Date is less than current value');
-		}	
+		}*/	
 		
 	}
 
@@ -86,30 +85,33 @@ class JobsController extends Controller
 	public function update(Request $request, $id){
 
 		$this->validate($request, [
-			'jobtitle' => 'required',
-			'location' => 'required',
-			'description' => 'required',
-			'salaryfrom' => 'required',
-			'salaryto' => 'required',
-			'closingdate' => 'required|date',
-			'candidatecount' => 'required',
+			'jobtitle'		=> 'required',
+			'location'		=> 'required',
+			'description'	=> 'required',
+			'sal_min'		=> 'required',
+			'sal_max'		=> 'required',
+			'min_exp'		=> 'required',
+			'max_exp'		=> 'required',
+			'no_of_pos'		=> 'required',
 		]); 
-		$data['site_code'] = '001';
-		$data['job_title'] = $request->jobtitle;
+			
+			
+		$data['user_id']	  = Auth::id();
+		$data['job_title']	  = $request->jobtitle;
 		$data['job_location'] = $request->location;
-		$data['exp'] = $request->experience;
-		$data['job_desc'] = $request->description;
-		$data['resume_req'] = $request->resume;
-		$data['sal_min'] = $request->salaryfrom;
-		$data['sal_max'] = $request->salaryto;
-		$data['close_dt'] = $request->closingdate;
-		$data['active'] = $request->active;
-		$data['cand_count'] = $request->candidatecount; 
-		$data['updated_at'] = date('Y-m-d H:i:s');
-		
+		$data['min_exp']	  = $request->min_exp;
+		$data['max_exp']	  = $request->max_exp;
+		$data['job_desc']	  = $request->description;
+		$data['resume_req']	  = $request->resume;
+		$data['sal_min']	  = $request->sal_min;
+		$data['sal_max']	  = $request->sal_max;
+		$data['no_of_pos']	  = $request->no_of_pos;
+		$data['updated_at']	  = date('Y-m-d H:i:s');
 
 		DB::table('job_posts')->where('id', $id)->update($data);
-		return redirect('/admin-post')->with('success', 'Data Updated Successfully');
+
+
+		return back()->with('success', 'Data Updated Successfully');
 	}
 
 	public function destroy($id){

@@ -42,6 +42,11 @@
   <div class="card-header bg-dark" style="color: white">
     <h1>Update job posting</h1>
   </div>
+  @if(session()->get('success'))
+    <div class="alert alert-success">
+      {{ session()->get('success') }}  
+    </div><br />
+  @endif
   <div class="card-body">
    
 <form method="post" action="{{route('admin.jobs.update', ['id' => $post->id])}} ">
@@ -71,18 +76,18 @@
                 </div>
                 <div class="col-md-6">
                   <label for="max_exp">Max Experience*</label>
-                  <input type="text" name="location" id="location" class="form-control" value="{{$post->max_exp}}">
+                  <input type="text" name="max_exp" id="max_exp" class="form-control" value="{{$post->max_exp}}">
                 </div>
               </div>              
               <div class="row">
                 <div class="col-md-6">
-                    <label for="">Salary From:</label>
-                     <input type="text" name="salaryfrom" id="salaryfrom" class="form-control" value="{{$post->sal_min}}">
+                    <label for="sal_min">Salary From:</label>
+                     <input type="text" name="sal_min" id="sal_min" class="form-control" value="{{$post->sal_min}}">
                 </div>
                 <div class="col-md-6">
-                    <label for="" >Salray To:</label>
+                    <label for="sal_max" >Salray To:</label>
                   
-                     <input type="text" name="salaryto" id="salaryto" class="form-control" value="{{$post->sal_max}}">
+                     <input type="text" name="sal_max" id="sal_max" class="form-control" value="{{$post->sal_max}}">
                 </div>
               </div>
                 <div class="row">
@@ -105,8 +110,8 @@
                     @endif
                 </div> --}}
                 <div class="col-md-6">
-                  <label for="startdate">Candidate Count*</label>
-                  <input type="text" name="candidatecount" id="candidatecount" class="form-control" value="{{$post->no_of_pos}}">
+                  <label for="no_of_pos">Candidate Count*</label>
+                  <input type="text" name="no_of_pos" id="no_of_pos" class="form-control" value="{{$post->no_of_pos}}">
                 </div>
                 <div class="col-md-6">
                      <label for="">Resume Necessary*</label>
