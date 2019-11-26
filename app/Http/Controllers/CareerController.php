@@ -9,9 +9,8 @@ use App\Models\Career;
 class CareerController extends Controller
 {
     public function index(){
-
+      
     	$posts = Job::where('deleted_at', null)->get();
-
     	return view('pages.careers', compact('posts'));
     }
 
@@ -22,9 +21,8 @@ class CareerController extends Controller
     }
 
     public function create($id){
-
+      return 5241;
     	$post = Job::findOrFail($id);
-
     	return view('pages.careerformapply', compact('post'));
     }
 
@@ -62,10 +60,9 @@ class CareerController extends Controller
         $careers->message   = $request->about;
         $careers->file_path = $path;
         $careers->created_at= date('Y-m-d H:i:s');
-        $careers->updated_at= date('Y-m-d H:i:s');
         $careers->save();
 
-        return back()->with(['success'=>'Thank You for contacting us, we will contact you soon...'/*, 'pea'=> $pea*/]);
+        return back()->with(['success'=>'Thank You for contacting us, we will contact you soon...']);
     }
 
 }

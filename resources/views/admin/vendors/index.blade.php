@@ -10,7 +10,7 @@
 <div class="container">
 	<div class="app-title">
         <div>
-          <h1><i class="fa fa-location"></i>Vender Data</h1>
+          <h1><i class="fa fa-location"></i>Venders</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
@@ -24,18 +24,18 @@
 			<thead class="bg-dark" style="color: white;text-align: center;">
 				<tr>
 				<th><input type="checkbox" id="selectallvender"></th>
-				<th >Company Name</th>
-				<th >Contact Person Name</th>
+				<th >Company</th>
+				<th >Person Name</th>
+        <th >Email</th>
 				<th >Designation</th>
-				<th >Email</th>
-				<th >Postal Address</th>
-				<th >Telephone No.</th>
+				<th >Address</th>
+				<th >Telephone</th>
 				<th >Mobile No.</th>
-				<th >Nature Of Business</th>
+				{{-- <th >Nature Of Business</th> --}}
 				<th >Products</th>
-				<th >PAN</th>
-				<th >GST</th>
-				<th>File Download</th>
+        <th >PAN</th>
+        <th >GST</th>
+				<th>File</th>
         <th>Time</th>
         <th >Action</th>
 			</tr>
@@ -46,29 +46,29 @@
 					<td><input type="checkbox" class="sub_chk_vender" data-id="{{$vender->id}}"></td>
 					<td>{{$vender->company_name}}</td>
 					<td>{{$vender->person_name}}</td>
-					<td>{{$vender->designation}}</td>
-					<td>{{$vender->email}}</td>
+          <td>{{$vender->person_email}}</td>
+					<td>{{$vender->person_desg}}</td>
 					<td>{{$vender->postal_address}}</td>
-					<td>{{$vender->telephone_no}}</td>
-					<td>{{$vender->mobile_no}}</td>
-					<td>{{$vender->nature_business}}</td>
+					<td>{{$vender->person_phone1}}</td>
+					<td>{{$vender->person_phone2}}</td>
+					{{-- <td>{{$vender->epc}}</td> --}}
 					<td>{{$vender->products}}</td>
 					<td>{{$vender->pan}}</td>
 					<td>{{$vender->gst}}</td>
 
-					@if($vender->file == '')
+					@if($vender->file_path == '')
 					   <td>No file</td>
 					@else
 					   <td>
-                  	 <a href="{{$domain.'/storage/brochure/'.$vender->file}}" target="_blank"><span class="fa fa-download fa-lg"></span></a>
+                <a href="{{route('dwld_vendor', $vender->id)}}" target="_blank"><span class="fa fa-download fa-lg"></span></a>
              </td> 
             @endif
-          <td>{{$vender->created_at}}</td>
+          <td>{{date("M d,Y H:i", strtotime($vender->created_at))}}</td>
 					<td>
 						<a href="#" class="btn text-danger " onclick="event.preventDefault(); if(confirm('Are you sure?')){
 		                  document.getElementById('delete-form-{{ $vender->id }}').submit();}"><span class="fa fa-trash fa-lg"></span></a>
 
-		                  <form id="delete-form-{{ $vender->id }}" action="{{-- {{ route('venderdel', ['id' => $vender->id ]) }} --}}" method="POST" style="display: none;">
+		                  <form id="delete-form-{{ $vender->id }}" action="{{ route('venderdel', ['id' => $vender->id ]) }}" method="POST" style="display: none;">
 		                      @csrf
 		                      @method('delete')
 		                  </form>

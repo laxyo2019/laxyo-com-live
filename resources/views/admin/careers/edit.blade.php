@@ -26,7 +26,6 @@
                   
         <li><a href="{{url('/admin-post')}}" class="app-menu__item active"><i class="app-menu__icon fa fa-tasks"></i><span class="app-menu__label">Job Post</span></a></li>
         <li><a href="{{url('/admin-sitevars')}}" class="app-menu__item "><i class="app-menu__icon fa fa-list-alt"></i><span class="app-menu__label">Site Vars</span></a></li>
-        
       </ul>
     </aside>  --}}
 <main class="app-content">

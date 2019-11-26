@@ -1,20 +1,6 @@
 @extends('layouts.app')
 @section('title','Career Form For Apply - Laxyo Energy Limited')
-<style>
-  .card{
-    height: 300px;
-    margin-bottom: 20px;
-  }
-  .card-footer a{
-    border-radius: 40px;
-    font-size: 10px;
-    
-  }
-  .newgif{
-    width: 20%;
-    float: left;
-  }
-</style>
+
 <!--Start TITLE PAGE-->	
 @section('body')
 <section class="title_page bg_3">		
@@ -55,14 +41,14 @@
       </div>
       <div class="col">
         @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+          <div class="alert alert-danger">
+            <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+        @endif
         @if(session()->get('success'))
           <div class="alert alert-success">
             {{ session()->get('success') }}  
@@ -71,7 +57,7 @@
       </div>
 			 <div class="col-md-12">
 		
-			 <form id="careerform" action="{{route('careers.store', ['id' => $post->id])}} {{-- {{ action('CareerController@submit') }} --}}" method="post" class="form" enctype="multipart/form-data">
+			 <form id="careerform" action="{{route('careers.store', ['id' => $post->id])}}" method="post" class="form" enctype="multipart/form-data">
       	     <div class="card form-group">
       	     @csrf
       	     <div class="card-header bg-primary">

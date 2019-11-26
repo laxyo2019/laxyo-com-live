@@ -35,13 +35,13 @@
 <!--End TITLE PAGE-->				
 <section class="content sb_right">			
 <div class="container">				
-<div class="row">					
-	<div class="col-lg-12 col-md-12 col-sm-12 effect-slide-bottom in">
-		<div class="intro_box">
-			<h1>Career <span>With Us</span></h1>
+	<div class="row">					
+		<div class="col-lg-12 col-md-12 col-sm-12 effect-slide-bottom in">
+			<div class="intro_box">
+				<h1>Career <span>With Us</span></h1>
+			</div>
 		</div>
 	</div>
-</div>
 
 
 	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
@@ -83,7 +83,7 @@
 						  Show Details
 						</a>&nbsp;
 						<a class="apply btn btn-success" href={{route('apply.career', ['id' => $post->id])}}>
-						  Apply Now
+						  Apply Nowww
 						</a>
 					</div>
 				</div>

@@ -46,32 +46,35 @@ Route::get('/apply-for-career/{id}', 'CareerController@create')->name('apply.car
 //For Job replies
 
 Route::get('job-replies/{id}', 'JobRepliesController@index')->name('replies');
-
 //download resume
 Route::get('admin/career/download/{id}', 'JobRepliesController@downloadresume')->name('download.document');
 
 Route::get('admin/job/{id}', 'JobsController@destroy')->name('job.destroy');
 
-
-
 // Admin Panel
+
+Route::get('DeleteAll_post', 'AdminController@DeleteAll_post');
+Route::get('/admin-download-vendor-file/{id}', 'AdminController@download_vendor')->name('dwld_vendor');
+Route::delete('/admin-vender/{id}', 'AdminController@vdestroy')->name('venderdel');
+Route::get('DeleteAll_vender', 'AdminController@deleteAll_vender');
+Route::delete('/admin-contact/{id}', 'AdminController@condestroy')->name('contactdel');
+Route::get('DeleteAll_contact', 'AdminController@DeleteAll_contact');
 
 // Route::get('/admin-career', 'AdminController@index');
 // Route::delete('/admin-career/{id}', 'AdminController@cdestroy')->name('cdel');
 // Route::get('search_career', 'AdminController@search_career');
 // Route::get('DeleteAllitems', 'AdminController@deleteAll');
-// Route::get('DeleteAll_vender', 'AdminController@deleteAll_vender');
-// Route::get('DeleteAll_contact', 'AdminController@DeleteAll_contact');
+ 
 // Route::get('DeleteAll_feedback', 'AdminController@DeleteAll_feedback');
-// Route::get('DeleteAll_post', 'AdminController@DeleteAll_post');
+
 // Route::post('/feedback', 'CareerController@feedback');
 // Route::get('/admin-feedback', 'AdminController@feedback');
 // Route::delete('/admin/{id}', 'AdminController@fdestroy')->name('fdel');
 // Route::get('/admin-contact', 'AdminController@contact');
-Route::delete('/admin-contact/{id}', 'AdminController@condestroy')->name('contactdel');
+
 // Route::get('/admin-vender', 'AdminController@vender');
-// Route::delete('/admin-vender/{id}', 'AdminController@vdestroy')->name('venderdel');
-// Route::get('/admin-download-vendor-file', 'AdminController@download_vendor')->name('dwld_vendor');
+// 
+// 
 // Route::get('/admin-download-career-file', 'AdminController@fileDownload')->name('download_career');
 // Route::resource('/admin-post', 'PostController');
 // Route::get('/admin-sitevars', 'AdminController@site_vars');

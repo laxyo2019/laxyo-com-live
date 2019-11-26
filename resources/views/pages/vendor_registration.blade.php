@@ -214,7 +214,7 @@
 						<label class="marr">Upload Brochure #</label>
 					</div>
 					<div class="col-md-9 col-lg-9 col-sm-12">
-						<input id="file_bcr" name="file_bcr" value="{{old('file_bcr')}}" type="file" class="form-control">
+						<input id="file_path" name="file_path" value="{{old('file_path')}}" type="file" class="form-control">
 					</div>
 				</div>
 		</div>

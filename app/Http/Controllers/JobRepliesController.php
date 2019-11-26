@@ -26,8 +26,8 @@ class JobRepliesController extends Controller
 
     $resume = Career::find($id)->file_path;
 
-     return Storage::download($resume);
-    return $resume;
+    return Storage::download($resume);
+    //return $resume;
   }
 
   public function submit(Request $request){

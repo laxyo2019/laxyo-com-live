@@ -8,6 +8,9 @@ use App\Feedback;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Auth; 
+use App\Models\Contact;
+use App\Models\Job;
+use App\Models\Vendor;
 
 class AdminController extends Controller
  {
@@ -82,19 +85,22 @@ class AdminController extends Controller
           return view('admin.laxyo.vender', compact('data','site_domain'));
           }
     public function vdestroy($id){
-         DB::table('form_vendor_reg')->delete($id);
-         $data = DB::table('form_mast')
+         DB::table('form_vendors')->delete($id);
+         /*$data = DB::table('form_mast')
               ->join('form_vendor_reg', 'form_vendor_reg.form_code', '=', 'form_mast.form_code')
               ->where('site_code', Auth::user()->site_code)->get();
-         return view('admin.laxyo.vender', compact('data'));
+         return view('admin.laxyo.vender', compact('data'));*/
+         return back()->with('success', 'Vendor deleted successfully.');
     }      
-    public function download_vendor(Request $request){
-
-      $filename= DB::table('form_vendor_reg')->where('id', $request->id)->get();
+    public function download_vendor(Request $request, $id){
+      $file = Vendor::where('id', $id)->first();
+      
+      /*$filename= DB::table('form_vendors')->where('id', $id)->first();
+      return $file->file_path;
       foreach ($filename as $key => $value) {
          $filename = $value->file;
-      }
-      return Storage::download('public/brochure/'.$filename);
+      }*/
+      return Storage::download($file->file_path);
      }   
 
 //contact
@@ -105,11 +111,13 @@ class AdminController extends Controller
       return view('admin.laxyo.contact', compact('data'));
        }
     public function condestroy($id){
-         DB::table('form_contact')->delete($id);
-         $data = DB::table('form_mast')
+         DB::table('form_contacts')->delete($id);
+         /*$data = DB::table('form_mast')
               ->join('form_contact', 'form_contact.form_code', '=', 'form_mast.form_code')
               ->where('site_code', Auth::user()->site_code)->get();
-         return view('admin.laxyo.contact', compact('data'));
+         return view('admin.laxyo.contact', compact('data'));*/
+
+         return back()->with('success', 'Contact deleted successfully.');
     }  
 
     public function show($id){
@@ -257,25 +265,29 @@ class AdminController extends Controller
     public function deleteAll_vender(Request $request)
     {
       $ids = $request->ids;
-      DB::table("form_vendor_reg")->whereIn('id',explode(",",$ids))->delete();
-      $data = DB::table('form_mast')->join('form_vendor_reg', 'form_vendor_reg.form_code', '=', 'form_mast.form_code')->where('site_code', Auth::user()->site_code)->get(); 
-      $site_domain = DB::table('site_mast')->where('site_code', Auth::user()->site_code)->get(); 
+      DB::table("form_vendors")->whereIn('id',explode(",",$ids))->delete();
+      /*$data = DB::table('form_mast')
+            ->join('form_vendor_reg', 'form_vendor_reg.form_code', '=', 'form_mast.form_code')
+            ->where('site_code', Auth::user()->site_code)
+            ->get();*/
+      $data = Vendor::all();
+      //$site_domain = DB::table('site_mast')->where('site_code', Auth::user()->site_code)->get(); 
         ?>
        <thead class="bg-dark" style="color: white;text-align: center;">
             <tr>
             <th><input type="checkbox" id="selectallvender"></th>
-            <th >Company Name</th>
-            <th >Contact Person Name</th>
-            <th >Designation</th>
+            <th >Company</th>
+            <th >Person Name</th>
             <th >Email</th>
-            <th >Postal Address</th>
-            <th >Telephone No.</th>
+            <th >Designation</th>
+            <th >Address</th>
+            <th >Telephone</th>
             <th >Mobile No.</th>
-            <th >Nature Of Business</th>
+            <!-- <th >Nature Of Business</th> -->
             <th >Products</th>
             <th >PAN</th>
             <th >GST</th>
-            <th>File Download</th>
+            <th>File</th>
             <th>Time</th>
             <th >Action</th>
           </tr>
@@ -283,9 +295,9 @@ class AdminController extends Controller
            
       
         <?php
-        foreach ($site_domain as $domain) {
+        /*foreach ($site_domain as $domain) {
         $domain = $domain->site_domain;
-        }
+        }*/
         foreach($data as $vender)
         {
           ?>
@@ -294,15 +306,15 @@ class AdminController extends Controller
               <td><input type="checkbox" class="sub_chk_vender" data-id="<?php echo $vender->id ?>"></td>
               <td><?php echo $vender->company_name ;?></td>
               <td><?php echo $vender->person_name; ?></td>
-              <td><?php echo $vender->designation ?></td>
               <td><?php echo $vender->email ?></td>
+              <td><?php echo $vender->designation ?></td>
               <td><?php echo $vender->postal_address ?></td>
               <td><?php echo $vender->telephone_no ?></td>
               <td><?php echo $vender->mobile_no ?></td>
-              <td><?php echo $vender->nature_business ?></td>
+              <td><?php /*echo $vender->nature_business*/ ?></td>
               <td><?php echo $vender->products ?></td>
               <td><?php echo $vender->pan ?></td>
-              <td><?php echo $vender->tan ?></td>
+              <td><?php /*echo $vender->tan*/ ?></td>
               <td><?php echo $vender->gst ?></td>
              <?php  if($vender->file == ''){?>
                        <td>No file</td>
@@ -310,7 +322,7 @@ class AdminController extends Controller
               else
                { ?>
                  <td>
-                   <a href="<?php $domain.'/storage/brochure/'.$vender->file ?>" target="_blank"><span class="fa fa-download fa-lg"></span></a>
+                   <!-- <a href="<?php $domain.'/storage/brochure/'.$vender->file ?>" target="_blank"><span class="fa fa-download fa-lg"></span></a> -->
                  </td> 
               <?php  }?>
               <td><?php echo $vender->created_at;?></td>
@@ -318,14 +330,13 @@ class AdminController extends Controller
                 <a href="#" class="btn text-danger " onclick="event.preventDefault(); if(confirm('Are you sure?')){
                           document.getElementById('delete-form-<?php $vender->id ?>').submit();}"><span class="fa fa-trash fa-lg"></span></a>
 
-                          <form id="delete-form-<?php $vender->id ?>" action="<?php route('venderdel', ['id' => $vender->id ]) ?>" method="POST" style="display: none;">
-                                   @csrf 
-                                    @method('delete')
-                          </form>
+                <form id="delete-form-<?php $vender->id ?>" action="<?php route('venderdel', ['id' => $vender->id ]) ?>" method="POST" style="display: none;">
+                         @csrf 
+                          @method('delete')
+                </form>
               </td>
             </tr>
         </tbody>
-
       <?php 
         }
       
@@ -335,12 +346,11 @@ class AdminController extends Controller
     public function DeleteAll_contact(Request $request){
 
        $ids = $request->ids;
-         DB::table("form_contact")->whereIn('id',explode(",",$ids))->delete();
-       $data =  DB::table('form_mast')
-              ->join('form_contact', 'form_contact.form_code', '=', 'form_mast.form_code')
-              ->where('site_code', Auth::user()->site_code)->get(); 
-   ?>
-      <thead class="bg-dark" style="color: white;text-align: center;width: 100%;">
+         DB::table("form_contacts")->whereIn('id',explode(",",$ids))->delete();
+
+          $data = Contact::latest()->get();
+    ?>
+      <!-- <thead class="bg-dark" style="color: white;text-align: center;width: 100%;">
         <tr style="">
         <th width="10%"><input type="checkbox" id="selectall_contact" name="selectall_contact">Id</th>
         <th width="20%">name</th>
@@ -350,37 +360,36 @@ class AdminController extends Controller
         <th width="20%">Message</th>
         <th>Time</th>
         <th width="10%">Action</th>
-      </tr>
+        </tr>
       </thead>
       
         <?php 
         foreach($data as $con) 
           {?>
-     <tbody>
+      <!-- <tbody>
        <tr>
         <td><input type="checkbox" class="sub_chk_contact" data-id="<?php echo $con->id ?>"></td>
-        <td><?php echo $con->name ?></td>
-        <td><?php echo $con->email ?></td>
-        <td><?php echo $con->address ?></td>
-        <td><?php echo $con->mobile ?></td>
-        <td><?php echo $con->message ?></td>
-        <td><?php echo $con->created_at;?></td>
+        <td><?php //echo $con->name ?></td>
+        <td><?php //echo $con->email ?></td>
+        <td><?php //echo $con->address ?></td>
+        <td><?php //echo $con->mobile ?></td>
+        <td><?php //echo $con->message ?></td>
+        <td><?php //echo $con->created_at;?></td>
         <td>
-                      <a href="#" class="btn btn-danger" onclick="event.preventDefault(); if(confirm('Are you sure?')){
-                      document.getElementById('delete-form-<?php $con->id ?>').submit();}"><span class="fa fa-trash"></span></a>
+            <a href="#" class="btn btn-danger" onclick="event.preventDefault(); if(confirm('Are you sure?')){
+            document.getElementById('delete-form-<?php //$con->id ?>').submit();}"><span class="fa fa-trash"></span></a>
 
-                      <form id="delete-form-<?php $con->id ?>" action="<?php route('contactdel', ['id' => $con->id ]) ?>" method="POST" style="display: none;">
-                                @csrf 
-                                @method('delete')
-                      </form>
-                 </td>
-              </tr>
+            <form id="delete-form-<?php //$con->id ?>" action="<?php //route('contactdel', ['id' => $con->id ]) ?>" method="POST" style="display: none;">
+              @csrf 
+              @method('delete')
+            </form>
+       </td>
+        </tr>
+      </tbody> -->
+    <?php}
 
-          </tbody>
-
-    <?php
-      }
-    
+     return back()->with('success', 'Records deleted succcessfully.');
+      
 
     }
 
@@ -414,14 +423,12 @@ class AdminController extends Controller
                   <td><?php echo $datas->subject ?></td>
                   <td><?php echo $datas->message ?></td>
                   <td><?php echo $datas->created_at;?></td>  
-                  <td>
-                   
+                  <td>                   
                 <a href="#" class="btn btn-danger" onclick="event.preventDefault(); if(confirm('Are you sure?')){
                   document.getElementById('delete-form-<?php $datas->id ?>').submit();}"><span class="fa fa-trash"></span></a>
-
                   <form id="delete-form-<?php $datas->id ?>" action="<?php route('fdel', ['id' => $datas->id ]) ?>" method="POST" style="display: none;">
-                                @csrf 
-                                @method('delete')
+                    @csrf 
+                    @method('delete')
                   </form>
                   </td>
                   </td>
@@ -437,7 +444,10 @@ class AdminController extends Controller
     public function DeleteAll_post(Request $request){
        $ids = $request->ids;
          DB::table("job_posts")->whereIn('id',explode(",",$ids))->delete();
-        $data = DB::table("job_posts")->select('*')->get(); 
+
+
+        //$data = DB::table("job_posts")->select('*')->get(); 
+        $data = Job::all();
       ?>
       <thead class="bg-dark" style="color: White;text-align: center;width: 100%;">
         <tr>

@@ -46,13 +46,13 @@
         <td>{{$con->created_at}}</td>
       
 			 	<td>
-                      <a href="#" class="text-danger" onclick="event.preventDefault(); if(confirm('Are you sure?')){
-		                  document.getElementById('delete-form-{{ $con->id }}').submit();}"><span class="fa fa-trash fa-lg"></span></a>
+        <a href="#" class="text-danger" onclick="event.preventDefault(); if(confirm('Are you sure?')){
+        document.getElementById('delete-form-{{ $con->id }}').submit();}"><span class="fa fa-trash fa-lg"></span></a>
 
-		                  <form id="delete-form-{{ $con->id }}" action="{{ route('contactdel', ['id' => $con->id ]) }}" method="POST" style="display: none;">
-		                      @csrf
-		                      @method('delete')
-		                  </form>
+        <form id="delete-form-{{ $con->id }}" action="{{ route('contactdel', ['id' => $con->id ]) }}" method="POST" style="display: none;">
+            @csrf
+            @method('delete')
+        </form>
 			 	</td>
 			 </tr>
 			 @endforeach
