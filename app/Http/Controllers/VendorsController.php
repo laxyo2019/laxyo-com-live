@@ -49,7 +49,6 @@ class VendorsController extends Controller
       //return 1;
     }else{
       $path = null;
-      return 2;
     }
 
     $vendor = new Vendor;

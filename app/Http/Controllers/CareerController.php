@@ -21,7 +21,6 @@ class CareerController extends Controller
     }
 
     public function create($id){
-      return 5241;
     	$post = Job::findOrFail($id);
     	return view('pages.careerformapply', compact('post'));
     }
