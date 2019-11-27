@@ -22,37 +22,39 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-lg-3">
-        <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
+        <div class="widget-small primary coloured-icon"><a href="{{route('admin.jobs.index')}}" ><i class="icon fa fa-users fa-3x"></i></a>
           <div class="info">
-            <h4>Careers</h4>
-            <p><span class="badge badge-success">5 New</span></p>
+            <a href="{{route('admin.jobs.index')}}"><h4>Careers</h4></a>
+            <p><span class="badge badge-success">
+              {{$jobs}} New
+                </span></p>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
-        <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
+        <div class="widget-small info coloured-icon"><a href="{{route('admin.vendors.index')}}" ><i class="icon fa fa-thumbs-o-up fa-3x"></i></a>
           <div class="info">
-            <h4>Vendors</h4>
-            <p><span class="badge badge-success">5 New</span></p>
+            <a href="{{route('admin.vendors.index')}}" ><h4>Vendors</h4></a>
+            <p><span class="badge badge-success">{{$vendors}} New</span></p>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
-        <div class="widget-small warning coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
+        <div class="widget-small warning coloured-icon"><a href="{{route('admin.contacts.index')}}" ><i class="icon fa fa-files-o fa-3x"></i></a>
           <div class="info">
-            <h4>Contacts</h4>
-            <p><span class="badge badge-success">5 New</span></p>
+            <a href="{{route('admin.contacts.index')}}" ><h4>Contacts</h4></a>
+            <p><span class="badge badge-success">{{$contacts}} New</span></p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
+      {{-- <div class="col-md-6 col-lg-3">
         <div class="widget-small danger coloured-icon"><i class="icon fa fa-star fa-3x"></i>
           <div class="info">
             <h4>Feedbacks</h4>
             <p><span class="badge badge-success">5 New</span></p>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
   </main>
   
